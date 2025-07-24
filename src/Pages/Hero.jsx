@@ -21,7 +21,7 @@ const Hero = () => {
         <span className="text-green-800">A</span>arambh
       </h6>
       <h4 className="tagline text-3xl md:text-6xl font-bold bg-white text-black">
-        <span className="text-green-800">F</span>it and{" "}
+        <span className="text-green-800">F</span>it &{" "}
         <span className="text-green-800">F</span>low
       </h4>
     </div>

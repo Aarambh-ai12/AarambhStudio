@@ -24,13 +24,13 @@ const Navbar = () => {
       <div>
         <img id="logo" src={logo} alt="" width={100} />
       </div>
-      {/* <div className="gap-5 hidden md:flex ">
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Classes</a>
-        <a href="">Instructor</a>
-        <a href="">Contact</a>
-      </div> */}
+      <div className="gap-5 hidden md:flex ">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#classes">Classes</a>
+        <a href="#instructors">Instructor</a>
+        <a href="#contact">Contact</a>
+      </div>
       <div>
         <a className="p-2 hover:bg-white hover:text-black rounded-md delay-75"
           href="#contact"

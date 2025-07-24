@@ -6,8 +6,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: white;
+  font-family: "Special Gothic Expanded One", sans-serif;
   background-image: url("./assets/img1.jpg"); /* adjust path if needed */
   background-size: cover;
   background-position: center;
