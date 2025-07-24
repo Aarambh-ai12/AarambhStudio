@@ -1,12 +1,43 @@
-# React + Vite
+# 💃 Dance Studio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive website for a dance studio built with **React.js** and **Tailwind CSS**. This project showcases studio details, instructor information, class offerings, and a contact form integrated with location via Google Maps.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 📸 Full-page background image with sticky scroll
+- 🧭 Navigation with smooth scrolling
+- 🎭 Hero section with call-to-action
+- 🙌 About section with studio details and logo
+- 👯‍♂️ Instructor carousel
+- 🕺 List of dance classes
+- 📩 Contact form with Web3Forms integration
+- 🗺️ Embedded Google Map
+- 📱 Fully responsive & mobile-friendly
+- 🧊 Glassmorphism effects for modern UI feel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Tech Stack
+
+- **React.js**
+- **Tailwind CSS**
+- **Web3Forms** (for contact form submissions)
+- **Google Maps Embed**
+- **React Hooks** & Component-based structure
+
+
+
+## 🔧 Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/dance-studio.git
+cd dance-studio
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
