@@ -7,7 +7,7 @@ html {
 }
 body {
   color: white;
-  font-family: "Special Gothic Expanded One", sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   background-image: url("./assets/img1.jpg"); /* adjust path if needed */
   background-size: cover;
   background-position: center;

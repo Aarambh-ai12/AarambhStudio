@@ -33,25 +33,25 @@ const InstructorCard = ({ instructorCard }) => {
           className="ml-15 md:ml-0 w-52 md:w-72 object-cover rounded-md"
         />
       </div>
-      <div className="md:w-[50%] flex flex-col justify-center ">
+      <div className="w-full">
+        <div className="flex flex-col justify-center ">
         <div className="mb-2 text-white text-7xl font-semibold">
           {instructor.name}
-        </div>
         <div className=" text-3xl text-white">{instructor.bio}</div>
-
-        <div className="flex justify-around mt-3 md:mt-30">
-          <button
-            onClick={handleNext}
-            className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
-          >
-            Next
-          </button>
-
+        </div>
+      </div>
+      <div className="flex justify-around mt-3 md:mt-30">
           <button
             onClick={handlePrev}
             className="px-4 py-2 bg-gray-800 rounded hover:bg-green-900"
           >
             Previous
+          </button>
+          <button
+            onClick={handleNext}
+            className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+          >
+            Next
           </button>
         </div>
       </div>

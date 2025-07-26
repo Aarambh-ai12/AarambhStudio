@@ -33,21 +33,35 @@ export const INSTRUCTORS = [
 // Classes Section
 export const CLASSES = [
   {
-    title: "Kids Ballet",
-    ageGroup: "Ages 4-8",
-    schedule: "Mon & Wed - 5:00 PM",
+    title: "Dance styles",
+    types: [
+      "Western Dance Style",
+      "Hip Hop",
+      "Ballet",
+      "Contemporary",
+      "Folk Dance",
+      "Bollywood Styles",
+      "Garba"
+    ],
   },
   {
-    title: "Hip-Hop Beginners",
-    ageGroup: "Ages 10+",
-    schedule: "Tue & Thu - 6:30 PM",
+    title: "Yoga",
+    types: [
+      "Hatha Yoga",
+      "Vinyasa Yoga",
+      "Ashtanga Yoga",
+      "Power Yoga",
+      "Restorative Yoga",
+      "Kundalini Yoga",
+      "Yin Yoga"
+    ],
   },
   {
-    title: "Contemporary Advanced",
-    ageGroup: "Adults",
-    schedule: "Sat - 10:00 AM",
+    title: "Zhumba",
+    types: ["Latin Zumba", "Zumba Toning", "Strong Nation"],
   },
 ];
+
 
 // Contact Section
 export const CONTACT_INFO = {

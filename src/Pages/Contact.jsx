@@ -73,11 +73,11 @@ function Contact() {
               className="w-full px-4 py-2 rounded-md bg-white/20 border border-white/30 text-black focus:outline-none"
             >
               <option value="">-- Select Dance Style --</option>
-              <option value="Hip Hop">Hip Hop</option>
-              <option value="Ballet">Ballet</option>
-              <option value="Contemporary">Contemporary</option>
-              <option value="Salsa">Salsa</option>
-              <option value="Kathak">Kathak</option>
+              <option value="Dance">Dance</option>
+              <option value="Zumba">Zumba</option>
+              <option value="Yoga Zumba">Yoga Zumba</option>
+              <option value="Dance Yoga">Dance Yoga</option>
+              <option value="Dance Zumba">Dance Zumba</option>
               <option value="Other">Other</option>
             </select>
           </div>
@@ -126,10 +126,10 @@ function Contact() {
               <span className="font-semibold">✉️ Email:</span>
               <br />
               <a
-                href="mailto:contact@dancestudio.com"
+                href="mailto:aarambhfitandflow@gmail.com"
                 className="underline hover:text-pink-400"
               >
-                contact@dancestudio.com
+                aarambhfitandflow@gmail.com
               </a>
             </div>
           </div>
