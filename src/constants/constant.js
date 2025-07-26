@@ -19,15 +19,10 @@ export const ABOUT_CONTENT = {
 // Instructor Section
 export const INSTRUCTORS = [
   {
-    name: "Aisha Kapoor",
+    name: "Rohit Sharma",
     image: trainee2, // add image in public/assets
-    bio: "Contemporary & Ballet specialist with 10+ years of experience.",
-  },
-  {
-    name: "Rahul Mehta",
-    image: trainee1,
-    bio: "Hip-Hop artist & choreographer featured on national TV.",
-  },
+    bio: "Gained early exposure to dance through community workshops and online learning. Currently expanding skills through dedicated training sessions..",
+  }
 ];
 
 // Classes Section
