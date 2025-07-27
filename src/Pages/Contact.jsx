@@ -57,6 +57,15 @@ function Contact() {
             />
           </div>
           <div>
+            <label className="block mb-1 text-sm">Phone No</label>
+            <input
+              type="tel"
+              name="phoneno"
+              placeholder="9876543210"
+              className="w-full px-4 py-2 rounded-md bg-white/20 border border-white/30 text-white focus:outline-none"
+            />
+          </div>
+          <div>
             <label className="block mb-1 text-sm">Message</label>
             <textarea
               rows="4"
