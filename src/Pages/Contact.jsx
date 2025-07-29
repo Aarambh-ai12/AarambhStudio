@@ -84,6 +84,7 @@ function Contact() {
               <option value="">-- Select Dance Style --</option>
               <option value="Dance">Dance</option>
               <option value="Zumba">Zumba</option>
+              <option value="Yoga">Yoga</option>
               <option value="Yoga Zumba">Yoga Zumba</option>
               <option value="Dance Yoga">Dance Yoga</option>
               <option value="Dance Zumba">Dance Zumba</option>
