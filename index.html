@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aarambh Fit & Flow</title>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #f9f9f9; }
     header { background: #222; color: white; text-align: center; padding: 20px; }
     nav { background: #444; padding: 10px; text-align: center; }
     nav a { color: white; margin: 10px; text-decoration: none; }
@@ -14,7 +14,9 @@
     .btn { background: #ff5733; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
     .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
     .gallery img { border-radius: 10px; width: 300px; height: 200px; object-fit: cover; }
-    footer { background: #222; color: white; text-align: center; padding: 10px; }
+    iframe { border: none; margin-top: 20px; }
+    footer { background: #222; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+    footer a { color: white; text-decoration: none; }
   </style>
 </head>
 <body>
@@ -29,6 +31,7 @@
   <a href="#classes">Classes</a>
   <a href="#schedule">Schedule</a>
   <a href="#gallery">Gallery</a>
+  <a href="#location">Location</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -39,7 +42,7 @@
 
 <section id="about" class="section">
   <h2>About Us</h2>
-  <p>We help you move, express and stay fit with Dance, Yoga and Zumba in Diva East, Mumbai.</p>
+  <p>We help you move, express and stay fit with Dance, Yoga, and Zumba in Diva East, Mumbai.</p>
 </section>
 
 <section id="classes" class="section">
@@ -62,17 +65,33 @@
   </div>
 </section>
 
+<section id="location" class="section">
+  <h2>Find Us</h2>
+  <p>Diva East, Mumbai</p>
+  <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.1160972349!2d72.74109995!3d19.0821978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7a0b9f8f8a1%3A0x123456789abcdef!2sDiva%20East%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1234567890"
+      width="100%" 
+      height="300" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+  </iframe>
+</section>
+
 <section id="contact" class="section">
   <h2>Contact Us</h2>
-  <p>📞 91-7738706975</p>
+  <p>📞 91-9876543210</p>
   <p>
-    <a href="https://wa.me/917738706975" class="btn" target="_blank">Chat on WhatsApp</a>
+    <a href="https://wa.me/919876543210" class="btn" target="_blank">Chat on WhatsApp</a>
   </p>
   <h3>Register for Free Trial</h3>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd-EXAMPLE-FORM/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd-EXAMPLE-FORM/viewform?embedded=true" width="100%" height="600">Loading…</iframe>
 </section>
 
 <footer>
+  <p>
+    <a href="https://instagram.com/your_aarambh_fit_and_flow" target="_blank">📷 Follow us on Instagram</a>
+  </p>
   <p>&copy; 2025 Aarambh Fit & Flow | Made with ❤️ in Mumbai</p>
 </footer>
 
