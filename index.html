@@ -7,23 +7,50 @@
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Aarambh-ai12/Aarambh_webpage/321a9d9eb3cc3e146fb7fee38e547cbe4cf3ba14/IMG_20250722_160400_824.webp">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
 
   <meta name="description" content="Aarambh Fit & Flow - Dance, Yoga, and Zumba Studio in Diva East, Mumbai. Join free trial classes today!">
   <meta name="keywords" content="Dance Classes Diva, Yoga Diva East, Zumba Diva, Aarambh Fit & Flow, Fitness Diva Mumbai">
   <meta name="author" content="Aarambh Fit & Flow">
 
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
   <style>
-    body { margin: 0; font-family: 'Roboto', sans-serif; background: #f9f9f9; }
-    header { background: #1b3d2f; color: white; text-align: center; padding: 20px; }
-    nav { background: #2e4d3f; padding: 10px; text-align: center; }
+    body { 
+      margin: 0; 
+      font-family: 'Roboto', sans-serif; 
+      background: #ffffff; 
+      color: #222;
+    }
+
+    /* HEADER */
+    header {
+      background: #1b4332;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p { font-size: 1.2rem; margin-top: 5px; }
+
+    /* NAVBAR */
+    nav {
+      background: #2d6a4f;
+      text-align: center;
+      padding: 10px 0;
+    }
     nav a {
       color: white;
-      margin: 10px;
+      margin: 0 15px;
       text-decoration: none;
       font-family: 'Poppins', sans-serif;
       font-size: 18px;
       position: relative;
+      transition: color 0.3s ease-in-out;
     }
     nav a::after {
       content: '';
@@ -39,29 +66,30 @@
 
     /* HERO SECTION */
     .hero {
-      background: url('https://source.unsplash.com/1600x600/?dance,yoga,fitness') no-repeat center/cover;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x600/?dance,fitness') no-repeat center/cover;
       height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       position: relative;
+      color: white;
     }
     .hero .overlay {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 50px;
-      border-radius: 10px;
+      animation: fadeIn 1.5s ease-in-out;
     }
     .hero h1 {
-      font-size: 3rem;
-      color: #00b894;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Pacifico', cursive;
+      font-size: 4rem;
+      color: #00ff99;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+      animation: slideDown 1.2s ease-out;
     }
     .hero p {
+      font-size: 1.5rem;
+      margin: 10px 0 20px;
       color: #f0f0f0;
-      font-size: 1.3rem;
-      margin: 10px 0;
+      animation: slideUp 1.5s ease-out;
     }
     .hero .btn {
       background: #00b894;
@@ -74,20 +102,52 @@
     }
     .hero .btn:hover { background: #019267; }
 
-    .section { padding: 50px; text-align: center; }
+    /* ANIMATIONS */
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* SECTIONS */
+    .section { padding: 60px 20px; text-align: center; }
+    .section:nth-child(even) { background: #f8f9fa; }
+    h2 { font-family: 'Poppins', sans-serif; color: #1b4332; font-size: 2.2rem; }
+
+    /* GALLERY */
     .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
     .gallery img { border-radius: 10px; width: 300px; height: 200px; object-fit: cover; }
-    iframe { border: none; margin-top: 20px; }
 
-    footer { background: #1b3d2f; color: white; text-align: center; padding: 10px; margin-top: 20px; }
-    footer a { color: white; text-decoration: none; }
-
-    /* Testimonials */
-    #testimonials { background: #f0f0f0; padding: 50px 20px; }
-    .testimonials {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
-      max-width: 900px; margin: 0 auto;
+    /* PRICING */
+    .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
     }
+    .pricing-card {
+      background: white;
+      border: 2px solid #1b4332;
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .pricing-card h3 { color: #1b4332; }
+    .pricing-card .price { font-size: 1.5rem; color: #00b894; }
+
+    /* TESTIMONIALS */
+    #testimonials { background: #f0f0f0; }
+    .testimonials { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 900px; margin: 0 auto; }
     .testimonial {
       background: white;
       padding: 20px;
@@ -96,9 +156,8 @@
       width: 280px;
       text-align: center;
     }
-    .testimonial h4 { margin-top: 10px; color: #555; }
 
-    /* WhatsApp Floating Button */
+    /* WHATSAPP BUTTON */
     #whatsapp-btn {
       position: fixed;
       bottom: 20px;
@@ -114,78 +173,6 @@
       z-index: 1000;
     }
     #whatsapp-btn:hover { background: #20b955; }
-
-    /* Pricing Section */
-    #pricing {
-      background: #f9f9f9;
-      padding: 60px 20px;
-    }
-    #pricing h2 {
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-      color: #00b894;
-      font-family: 'Poppins', sans-serif;
-    }
-    .pricing-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-    }
-    .pricing-card {
-      background: white;
-      border: 2px solid #00b894;
-      border-radius: 15px;
-      padding: 30px;
-      width: 280px;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .pricing-card.highlight {
-      background: #e8f8f5;
-      border: 2px solid #019267;
-    }
-    .pricing-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
-    .pricing-card h3 {
-      font-size: 1.6rem;
-      color: #222;
-    }
-    .pricing-card .price {
-      font-size: 1.8rem;
-      color: #00b894;
-      margin: 15px 0;
-      font-weight: bold;
-    }
-    .pricing-card .price span {
-      font-size: 1rem;
-      color: #666;
-    }
-    .pricing-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 15px 0;
-      color: #444;
-    }
-    .pricing-card ul li {
-      margin: 8px 0;
-    }
-    .pricing-card .btn {
-      display: inline-block;
-      background: #00b894;
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      margin-top: 10px;
-      transition: background 0.3s;
-    }
-    .pricing-card .btn:hover {
-      background: #019267;
-    }
   </style>
 </head>
 <body>
@@ -204,12 +191,20 @@
   <a href="#testimonials">Testimonials</a>
   <a href="#contact">Contact</a>
 </nav>
-  
+
 <!-- HERO SECTION -->
 <section class="hero">
   <div class="overlay">
     <h1>Aarambh Fit & Flow</h1>
     <p>Where Movement Begins – Dance | Yoga | Zumba</p>
+    <lottie-player 
+        src="https://assets7.lottiefiles.com/packages/lf20_u4yrau.json"
+        background="transparent"
+        speed="1"
+        style="width: 250px; height: 250px; margin: 20px auto;"
+        loop
+        autoplay>
+    </lottie-player>
     <a href="https://forms.gle/cFCFhxVHhCSSHr2U7" target="_blank" class="btn">Register Now</a>
   </div>
 </section>
@@ -235,34 +230,31 @@
   <h2>Our Pricing</h2>
   <div class="pricing-container">
     <div class="pricing-card">
-      <h3>💃 Dance</h3>
-      <p class="price">₹1,500 <span>/ month</span></p>
+      <h3>Dance</h3>
+      <p class="price">₹1,500 / month</p>
       <ul>
         <li>Bollywood, Hip-Hop, Contemporary</li>
         <li>3 Classes per week</li>
         <li>Free Trial Available</li>
       </ul>
-      <a href="https://forms.gle/cFCFhxVHhCSSHr2U7" target="_blank" class="btn">Join Now</a>
     </div>
-    <div class="pricing-card highlight">
-      <h3>🧘 Yoga</h3>
-      <p class="price">₹1,200 <span>/ month</span></p>
+    <div class="pricing-card">
+      <h3>Yoga</h3>
+      <p class="price">₹1,200 / month</p>
       <ul>
         <li>Hatha, Vinyasa, Power Yoga</li>
         <li>Morning & Evening Batches</li>
         <li>Free Trial Available</li>
       </ul>
-      <a href="https://forms.gle/cFCFhxVHhCSSHr2U7" target="_blank" class="btn">Join Now</a>
     </div>
     <div class="pricing-card">
-      <h3>🔥 Zumba</h3>
-      <p class="price">₹1,000 <span>/ month</span></p>
+      <h3>Zumba</h3>
+      <p class="price">₹1,000 / month</p>
       <ul>
         <li>High Energy Workouts</li>
         <li>3 Classes per week</li>
         <li>Free Trial Available</li>
       </ul>
-      <a href="https://forms.gle/cFCFhxVHhCSSHr2U7" target="_blank" class="btn">Join Now</a>
     </div>
   </div>
 </section>
