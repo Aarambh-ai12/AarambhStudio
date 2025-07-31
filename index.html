@@ -10,41 +10,48 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Roboto', sans-serif; background: #f9f9f9; color: #333; }
-    
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f9f9f9;
+    }
+
     /* HEADER */
     header {
-      background: #1b3d2f;
+      background: #222;
       color: white;
+      padding: 10px 30px;
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .logo-title {
       display: flex;
       align-items: center;
-      padding: 15px 30px;
-      justify-content: center;
       gap: 15px;
     }
-    header img {
-      height: 50px;
-      width: 50px;
+    .logo-title img {
+      height: 80px;
+      width: 80px;
       border-radius: 50%;
     }
-    header h1 {
+    .logo-title h1 {
       font-family: 'Poppins', sans-serif;
-      font-size: 2rem;
+      font-size: 2.2rem;
+      color: #00b894;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
     }
 
-    nav {
-      background: #2f4f3f;
-      text-align: center;
-      padding: 12px 0;
-    }
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 12px;
       text-decoration: none;
-      font-size: 18px;
       font-family: 'Poppins', sans-serif;
+      font-size: 18px;
       position: relative;
     }
     nav a::after {
@@ -56,28 +63,36 @@
       transition: width 0.3s;
       margin: auto;
     }
-    nav a:hover::after { width: 100%; }
-    nav a:hover { color: #25d366; }
+    nav a:hover::after {
+      width: 100%;
+    }
+    nav a:hover {
+      color: #25d366;
+    }
 
     /* HERO SECTION */
     .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                  url('https://source.unsplash.com/1600x800/?fitness,dance,yoga') no-repeat center/cover;
+      background: linear-gradient(rgba(0, 40, 0, 0.7), rgba(0, 40, 0, 0.7)), url('https://source.unsplash.com/1600x600/?dance,yoga,fitness') no-repeat center/cover;
       height: 100vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: white;
+      position: relative;
+    }
+    .hero .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 50px;
+      border-radius: 10px;
     }
     .hero h1 {
       font-size: 3rem;
       color: #00b894;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      font-family: 'Poppins', sans-serif;
     }
     .hero p {
-      font-size: 1.2rem;
+      color: #f0f0f0;
+      font-size: 1.3rem;
       margin: 10px 0;
     }
     .hero .btn {
@@ -89,57 +104,77 @@
       text-decoration: none;
       transition: 0.3s;
     }
-    .hero .btn:hover { background: #019267; }
+    .hero .btn:hover {
+      background: #019267;
+    }
 
-    .section { padding: 60px 20px; text-align: center; }
+    /* SECTIONS */
+    .section {
+      padding: 50px;
+      text-align: center;
+    }
 
-    /* ABOUT */
-    #about { background: #f0f4f0; }
-
-    /* CLASSES */
-    .classes-container {
+    /* CLASSES & PRICING GRID */
+    .three-column {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      flex-wrap: wrap;
     }
-    .class-card {
+    .card {
       background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
       width: 300px;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .class-card:hover { transform: translateY(-8px); }
-    .class-card h3 { color: #1b3d2f; margin-bottom: 10px; }
-
-    /* PRICING */
-    .pricing-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .pricing-card {
-      background: #ffffff;
-      border: 2px solid #00b894;
-      width: 280px;
-      padding: 20px;
-      border-radius: 10px;
       text-align: center;
       transition: transform 0.3s;
     }
-    .pricing-card:hover { transform: scale(1.05); }
-    .price { font-size: 1.5rem; color: #00b894; font-weight: bold; }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      color: #00b894;
+      font-family: 'Poppins', sans-serif;
+    }
+    .card p {
+      font-size: 1rem;
+      color: #555;
+    }
+    .price {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #222;
+      margin: 10px 0;
+    }
 
     /* GALLERY */
-    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
-    .gallery img { border-radius: 10px; width: 300px; height: 200px; object-fit: cover; }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .gallery img {
+      border-radius: 10px;
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+    }
 
     /* TESTIMONIALS */
-    #testimonials { background: #f0f0f0; }
-    .testimonials { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    #testimonials {
+      background: #f0f0f0;
+      padding: 50px 20px;
+    }
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
     .testimonial {
       background: white;
       padding: 20px;
@@ -148,12 +183,31 @@
       width: 280px;
       text-align: center;
     }
+    .testimonial h4 {
+      margin-top: 10px;
+      color: #555;
+    }
 
     /* CONTACT */
-    #contact p { margin: 8px 0; }
-    iframe { border: none; margin-top: 20px; width: 100%; height: 600px; }
+    iframe {
+      border: none;
+      margin-top: 20px;
+    }
 
-    /* WHATSAPP FLOATING BUTTON */
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* WHATSAPP BUTTON */
     #whatsapp-btn {
       position: fixed;
       bottom: 20px;
@@ -168,51 +222,61 @@
       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
       z-index: 1000;
     }
-    #whatsapp-btn:hover { background: #20b955; }
+    #whatsapp-btn:hover {
+      background: #20b955;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="https://raw.githubusercontent.com/Aarambh-ai12/Aarambh_webpage/321a9d9eb3cc3e146fb7fee38e547cbe4cf3ba14/IMG_20250722_160400_824.webp" alt="Logo">
-  <h1>Aarambh Fit & Flow</h1>
+  <div class="header-container">
+    <div class="logo-title">
+      <img src="https://raw.githubusercontent.com/Aarambh-ai12/Aarambh_webpage/321a9d9eb3cc3e146fb7fee38e547cbe4cf3ba14/IMG_20250722_160400_824.webp" alt="Aarambh Fit & Flow Logo">
+      <h1>Aarambh Fit & Flow</h1>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#classes">Classes</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#classes">Classes</a>
-  <a href="#schedule">Schedule</a>
-  <a href="#pricing">Pricing</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#testimonials">Testimonials</a>
-  <a href="#contact">Contact</a>
-</nav>
-
 <section class="hero">
-  <h1>Aarambh Fit & Flow</h1>
-  <p>Where Movement Begins – Dance | Yoga | Zumba</p>
-  <a href="https://forms.gle/cFCFhxVHhCSSHr2U7" target="_blank" class="btn">Register Now</a>
+  <div class="overlay">
+    <h1>Aarambh Fit & Flow</h1>
+    <p>Where Movement Begins – Dance | Yoga | Zumba</p>
+    <a href="https://forms.gle/cFCFhxVHhCSSHr2U7" target="_blank" class="btn">Register Now</a>
+  </div>
 </section>
 
 <section id="about" class="section">
   <h2>About Us</h2>
   <p>We help you move, express, and stay fit with Dance, Yoga, and Zumba in Diva East, Mumbai.</p>
+  <p>💃 Dance improves flexibility, burns calories, and boosts confidence.<br>
+     🧘 Yoga strengthens your body and calms your mind.<br>
+     🔥 Zumba gives you high-energy cardio fun with music.</p>
 </section>
 
 <section id="classes" class="section">
   <h2>Our Classes</h2>
-  <div class="classes-container">
-    <div class="class-card">
+  <div class="three-column">
+    <div class="card">
       <h3>Dance</h3>
       <p>Bollywood, Hip-Hop, Contemporary, Salsa, Jazz, Classical, Freestyle, Bhangra</p>
     </div>
-    <div class="class-card">
+    <div class="card">
       <h3>Yoga</h3>
       <p>Hatha, Vinyasa, Ashtanga, Power Yoga</p>
     </div>
-    <div class="class-card">
+    <div class="card">
       <h3>Zumba</h3>
-      <p>High-energy cardio fitness sessions with music and fun!</p>
+      <p>High-energy cardio fitness with music</p>
     </div>
   </div>
 </section>
@@ -223,34 +287,22 @@
 </section>
 
 <section id="pricing" class="section">
-  <h2>Our Pricing</h2>
-  <div class="pricing-container">
-    <div class="pricing-card">
+  <h2>Pricing</h2>
+  <div class="three-column">
+    <div class="card">
       <h3>Dance</h3>
       <p class="price">₹1,500 / month</p>
-      <ul>
-        <li>8 Dance Styles</li>
-        <li>3 Classes per week</li>
-        <li>Free Trial Available</li>
-      </ul>
+      <p>3 Classes per week<br>Free Trial Available</p>
     </div>
-    <div class="pricing-card">
+    <div class="card">
       <h3>Yoga</h3>
       <p class="price">₹1,200 / month</p>
-      <ul>
-        <li>Hatha, Vinyasa, Power Yoga</li>
-        <li>Morning & Evening Batches</li>
-        <li>Free Trial Available</li>
-      </ul>
+      <p>Morning & Evening batches<br>Free Trial Available</p>
     </div>
-    <div class="pricing-card">
+    <div class="card">
       <h3>Zumba</h3>
       <p class="price">₹1,000 / month</p>
-      <ul>
-        <li>High Energy Workouts</li>
-        <li>3 Classes per week</li>
-        <li>Free Trial Available</li>
-      </ul>
+      <p>High-energy workouts<br>Free Trial Available</p>
     </div>
   </div>
 </section>
@@ -291,7 +343,7 @@
     <a href="https://wa.me/917738706975" class="btn" target="_blank">Chat on WhatsApp</a>
   </p>
   <h3>Register for Free Trial</h3>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf2C2a9RZP7dBi50Wc6_L9VslHnOPen30YiOP9eHnQfcybASw/viewform?embedded=true">Loading…</iframe>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf2C2a9RZP7dBi50Wc6_L9VslHnOPen30YiOP9eHnQfcybASw/viewform?embedded=true" width="100%" height="600">Loading…</iframe>
 </section>
 
 <footer>
@@ -301,7 +353,7 @@
   <p>&copy; 2025 Aarambh Fit & Flow | Made with ❤️ in Mumbai</p>
 </footer>
 
-<!-- Floating WhatsApp Button -->
+<!-- WhatsApp Floating Button -->
 <a href="https://wa.me/917738706975" target="_blank" id="whatsapp-btn">💬</a>
 
 </body>
