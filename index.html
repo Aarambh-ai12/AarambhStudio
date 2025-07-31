@@ -9,18 +9,52 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
 
-  <meta name="description" content="Aarambh Fit & Flow - Dance, Yoga, and Zumba Studio in Diva East, Mumbai. Join free trial classes today!">
-  <meta name="keywords" content="Dance Classes Diva, Yoga Diva East, Zumba Diva, Aarambh Fit & Flow, Fitness Diva Mumbai">
-  <meta name="author" content="Aarambh Fit & Flow">
-
+  <!-- Smooth Scroll -->
   <style>
-    body { margin: 0; font-family: 'Roboto', sans-serif; background: #f9f9f9; }
-    header { background: #00b894; color: white; text-align: center; padding: 20px; }
-    header h1 { font-family: 'Poppins', sans-serif; font-size: 2.5rem; margin: 0; }
-    header p { margin: 5px 0; }
+    html {
+      scroll-behavior: smooth;
+    }
 
-    nav { background: #222; padding: 10px; text-align: center; }
-    nav a { 
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f9f9f9;
+    }
+
+    /* Loader */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+
+    /* Navbar */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      transition: background 0.3s;
+    }
+    header.scrolled {
+      background: #00b894;
+    }
+    nav {
+      background: #333;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
       color: white;
       margin: 10px;
       text-decoration: none;
@@ -42,7 +76,7 @@
 
     /* HERO SECTION */
     .hero {
-      background: url('https://source.unsplash.com/1600x800/?fitness,dance') no-repeat center/cover;
+      background: url('https://source.unsplash.com/1600x600/?dance,yoga,fitness') no-repeat center/cover;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -51,15 +85,14 @@
       position: relative;
     }
     .hero .overlay {
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.7);
       padding: 50px;
       border-radius: 10px;
     }
     .hero h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       color: #00b894;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-      font-family: 'Poppins', sans-serif;
     }
     .hero p {
       color: #f0f0f0;
@@ -74,61 +107,73 @@
       font-size: 1.2rem;
       text-decoration: none;
       transition: 0.3s;
+      box-shadow: 0 0 10px rgba(0,184,148,0.7);
     }
-    .hero .btn:hover { background: #019267; }
-
-    /* SECTIONS */
-    .section { padding: 60px 20px; text-align: center; }
-
-    /* CLASSES */
-    #classes ul {
-      list-style: none;
-      padding: 0;
-      max-width: 600px;
-      margin: 20px auto;
-      text-align: left;
-    }
-    #classes li {
-      background: white;
-      margin: 10px;
-      padding: 10px;
-      border-radius: 5px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    .hero .btn:hover {
+      background: #019267;
+      box-shadow: 0 0 15px rgba(0,255,200,0.9);
     }
 
-    /* PRICING */
-    #pricing { background: #f0f0f0; }
-    .pricing-container {
+    .section {
+      padding: 50px;
+      text-align: center;
+    }
+
+    /* Pricing Section */
+    #pricing .pricing-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      margin-top: 20px;
     }
     .pricing-card {
       background: white;
-      padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
       width: 280px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .pricing-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     }
     .pricing-card h3 { color: #00b894; }
-    .price { font-size: 1.5rem; color: #333; margin: 10px 0; }
+    .pricing-card .price {
+      font-size: 1.5rem;
+      color: #333;
+      margin: 10px 0;
+    }
 
-    /* GALLERY */
-    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .gallery img { border-radius: 10px; width: 300px; height: 200px; object-fit: cover; }
+    /* Gallery Carousel */
+    .gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      scroll-snap-type: x mandatory;
+      padding: 10px;
+    }
+    .gallery img {
+      flex: 0 0 auto;
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      scroll-snap-align: center;
+    }
 
-    /* TESTIMONIALS */
-    #testimonials { background: #f0f0f0; }
+    /* Testimonials */
+    #testimonials {
+      background: #f0f0f0;
+      padding: 50px 20px;
+    }
     .testimonials {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
-      max-width: 900px; margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
     }
     .testimonial {
       background: white;
@@ -138,14 +183,22 @@
       width: 280px;
       text-align: center;
     }
-    .testimonial h4 { margin-top: 10px; color: #555; }
 
-    /* CONTACT */
-    #contact p { margin: 10px 0; }
+    /* Contact Section */
+    iframe { border: none; margin-top: 20px; }
 
-    /* FOOTER */
-    footer { background: #222; color: white; text-align: center; padding: 10px; margin-top: 20px; }
-    footer a { color: white; text-decoration: none; }
+    /* Footer */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    footer a {
+      color: #25d366;
+      text-decoration: none;
+      margin: 0 5px;
+    }
 
     /* WhatsApp Floating Button */
     #whatsapp-btn {
@@ -167,6 +220,11 @@
 </head>
 <body>
 
+<!-- Loader -->
+<div id="loader">
+  <img src="https://assets7.lottiefiles.com/packages/lf20_u4yrau.json" width="120">
+</div>
+
 <header>
   <h1>Aarambh Fit & Flow</h1>
   <p>Where Movement Begins – Dance | Yoga | Zumba</p>
@@ -183,19 +241,10 @@
 </nav>
 
 <!-- HERO SECTION -->
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <section class="hero">
   <div class="overlay">
     <h1>Aarambh Fit & Flow</h1>
     <p>Where Movement Begins – Dance | Yoga | Zumba</p>
-    <lottie-player 
-        src="https://assets7.lottiefiles.com/packages/lf20_u4yrau.json"
-        background="transparent"
-        speed="1"
-        style="width: 250px; height: 250px; margin: 20px auto;"
-        loop
-        autoplay>
-    </lottie-player>
     <a href="https://forms.gle/cFCFhxVHhCSSHr2U7" target="_blank" class="btn">Register Now</a>
   </div>
 </section>
@@ -207,11 +256,9 @@
 
 <section id="classes" class="section">
   <h2>Our Classes</h2>
-  <ul>
-    <li>Dance – Bollywood, Hip-Hop, Contemporary, Salsa, Jazz, Classical, Freestyle, Bhangra</li>
-    <li>Yoga – Hatha, Vinyasa, Ashtanga, Power Yoga</li>
-    <li>Zumba – High-energy cardio fitness</li>
-  </ul>
+  <p>Dance – Bollywood, Hip-Hop, Contemporary, Salsa, Jazz, Classical, Freestyle, Bhangra<br>
+     Yoga – Hatha, Vinyasa, Ashtanga, Power Yoga<br>
+     Zumba – High-energy cardio fitness</p>
 </section>
 
 <section id="schedule" class="section">
@@ -284,22 +331,33 @@
   <h2>Contact Us</h2>
   <p>📍 Mumbra Devi Colony, Diva East, Behind St. Merry School, Mumbai</p>
   <p>📞 91-7738706975</p>
-  <p>
-    <a href="https://wa.me/917738706975" class="btn" target="_blank">Chat on WhatsApp</a>
-  </p>
-  <h3>Register for Free Trial</h3>
+  <p><a href="https://wa.me/917738706975" class="btn" target="_blank">Chat on WhatsApp</a></p>
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf2C2a9RZP7dBi50Wc6_L9VslHnOPen30YiOP9eHnQfcybASw/viewform?embedded=true" width="100%" height="600">Loading…</iframe>
 </section>
 
 <footer>
   <p>
-    <a href="https://instagram.com/aarambh_fit_and_flow" target="_blank">📷 Follow us on Instagram</a>
+    <a href="#about">About</a> | 
+    <a href="#classes">Classes</a> | 
+    <a href="#pricing">Pricing</a> | 
+    <a href="#contact">Contact</a>
   </p>
   <p>&copy; 2025 Aarambh Fit & Flow | Made with ❤️ in Mumbai</p>
 </footer>
 
 <!-- Floating WhatsApp Button -->
 <a href="https://wa.me/917738706975" target="_blank" id="whatsapp-btn">💬</a>
+
+<script>
+  window.addEventListener("scroll", () => {
+    const header = document.querySelector("header");
+    header.classList.toggle("scrolled", window.scrollY > 50);
+  });
+
+  window.addEventListener("load", () => {
+    document.getElementById("loader").style.display = "none";
+  });
+</script>
 
 </body>
 </html>
