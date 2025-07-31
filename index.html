@@ -8,14 +8,17 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
   <style>
     :root {
       --dark-green: #1d794c;
       --light-green: #2a9451;
       --white: #ffffff;
-      --black: #000000;
+      --grey: #f5f5f5;
     }
 
     body {
@@ -26,7 +29,7 @@
     }
 
     header {
-      background: var(--black);
+      background: var(--dark-green);
       color: var(--white);
       text-align: center;
       padding: 20px;
@@ -52,12 +55,12 @@
     }
 
     nav a:hover {
-      color: var(--black);
+      color: var(--dark-green);
     }
 
     /* HERO SECTION */
     .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/1600x600/?dance,yoga,fitness') no-repeat center/cover;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x600/?dance,yoga,fitness') no-repeat center/cover;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -148,43 +151,46 @@
       font-size: 1.5rem;
     }
 
-    .card p {
-      color: #333;
+    /* Pricing Section */
+    .discount-note {
+      font-size: 1.2rem;
+      color: #e63946;
+      margin-bottom: 25px;
+      font-weight: bold;
     }
 
-    /* Pricing Table */
-    .pricing-section {
-      background: var(--black);
-      color: var(--white);
-      padding: 60px 20px;
-    }
-
-    .pricing-section table {
+    .pricing-table {
       width: 90%;
+      max-width: 1000px;
       margin: 0 auto;
       border-collapse: collapse;
-      background: var(--white);
-      color: var(--black);
-      border-radius: 10px;
-      overflow: hidden;
-      animation: fadeInUp 1.5s ease;
     }
 
-    .pricing-section th, .pricing-section td {
+    .pricing-table th, .pricing-table td {
       border: 1px solid #ddd;
       padding: 12px;
       text-align: center;
     }
 
-    .pricing-section th {
-      background: var(--dark-green);
-      color: var(--white);
+    .pricing-table th {
+      background: var(--light-green);
+      color: white;
     }
 
-    .discount-note {
-      margin-top: 10px;
+    .pricing-table td {
+      background: var(--grey);
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #888;
       font-size: 14px;
-      color: var(--light-green);
+    }
+
+    .new-price {
+      color: var(--dark-green);
+      font-weight: bold;
+      font-size: 16px;
     }
 
     /* Gallery */
@@ -277,12 +283,12 @@
   </div>
 </section>
 
-<section id="about" class="section">
+<section id="about" class="section" data-aos="fade-up">
   <h2>About Us</h2>
   <p>We help you move, express, and stay fit with Dance, Yoga, and Zumba in Diva East, Mumbai. Our mission is to bring fitness and joy into your life through movement.</p>
 </section>
 
-<section id="classes" class="section">
+<section id="classes" class="section" data-aos="fade-up">
   <h2>Our Classes</h2>
   <div class="classes-container">
     <div class="card">
@@ -300,67 +306,71 @@
   </div>
 </section>
 
-<section id="schedule" class="section">
+<section id="schedule" class="section" data-aos="fade-up">
   <h2>Schedule</h2>
   <p>Morning: 6:00 AM – 12:30 PM<br>Evening: 3:30 PM – 10:00 PM</p>
 </section>
 
-<section id="pricing" class="pricing-section">
+<section id="pricing" class="section" data-aos="fade-up">
   <h2>Pricing</h2>
-  <table>
-    <tr>
-      <th>Plan</th>
-      <th>1 Month (₹)</th>
-      <th>3 Months (₹)</th>
-      <th>6 Months (₹)</th>
-      <th>12 Months (₹)</th>
-      <th>Discount %</th>
-    </tr>
-    <tr>
-      <td>Dance</td>
-      <td><s>1500</s> <b>999</b></td>
-      <td><s>4499</s> <b>2999</b></td>
-      <td><s>8899</s> <b>5999</b></td>
-      <td><s>17,999</s> <b>11,999</b></td>
-      <td>33%</td>
-    </tr>
-    <tr>
-      <td>Yoga</td>
-      <td><s>1800</s> <b>999</b></td>
-      <td><s>5349</s> <b>2999</b></td>
-      <td><s>10,799</s> <b>5999</b></td>
-      <td><s>21,599</s> <b>11,999</b></td>
-      <td>44%</td>
-    </tr>
-    <tr>
-      <td>Zumba</td>
-      <td><s>1500</s> <b>999</b></td>
-      <td><s>4499</s> <b>2999</b></td>
-      <td><s>8899</s> <b>5999</b></td>
-      <td><s>17,999</s> <b>11,999</b></td>
-      <td>33%</td>
-    </tr>
-    <tr>
-      <td>Dance + Yoga</td>
-      <td><s>2500</s> <b>1799</b></td>
-      <td><s>5999</s> <b>5499</b></td>
-      <td><s>11,799</s> <b>10,899</b></td>
-      <td><s>23,000</s> <b>21,999</b></td>
-      <td>49%</td>
-    </tr>
-    <tr>
-      <td>Dance + Yoga + Zumba</td>
-      <td><s>4000</s> <b>2599</b></td>
-      <td><s>8700</s> <b>8200</b></td>
-      <td><s>17,000</s> <b>15,999</b></td>
-      <td><s>34,000</s> <b>31,999</b></td>
-      <td>65%</td>
-    </tr>
+  <p class="discount-note">🎉 Discounts available only for the first week!</p>
+  <table class="pricing-table">
+    <thead>
+      <tr>
+        <th>Plan</th>
+        <th>1 Month (₹)</th>
+        <th>3 Months (₹)</th>
+        <th>6 Months (₹)</th>
+        <th>12 Months (₹)</th>
+        <th>Discount %</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dance</td>
+        <td><span class="old-price">1500</span> <span class="new-price">999</span></td>
+        <td><span class="old-price">4499</span> <span class="new-price">2999</span></td>
+        <td><span class="old-price">8899</span> <span class="new-price">5999</span></td>
+        <td><span class="old-price">17,999</span> <span class="new-price">11,999</span></td>
+        <td>33%</td>
+      </tr>
+      <tr>
+        <td>Yoga</td>
+        <td><span class="old-price">1800</span> <span class="new-price">999</span></td>
+        <td><span class="old-price">5349</span> <span class="new-price">2999</span></td>
+        <td><span class="old-price">10,799</span> <span class="new-price">5999</span></td>
+        <td><span class="old-price">21,599</span> <span class="new-price">11,999</span></td>
+        <td>44%</td>
+      </tr>
+      <tr>
+        <td>Zumba</td>
+        <td><span class="old-price">1500</span> <span class="new-price">999</span></td>
+        <td><span class="old-price">4499</span> <span class="new-price">2999</span></td>
+        <td><span class="old-price">8899</span> <span class="new-price">5999</span></td>
+        <td><span class="old-price">17,999</span> <span class="new-price">11,999</span></td>
+        <td>33%</td>
+      </tr>
+      <tr>
+        <td>Dance + Yoga</td>
+        <td><span class="old-price">2500</span> <span class="new-price">1799</span></td>
+        <td><span class="old-price">5999</span> <span class="new-price">5499</span></td>
+        <td><span class="old-price">11,799</span> <span class="new-price">10,899</span></td>
+        <td><span class="old-price">23,000</span> <span class="new-price">21,999</span></td>
+        <td>28%</td>
+      </tr>
+      <tr>
+        <td>Dance + Yoga + Zumba</td>
+        <td><span class="old-price">4000</span> <span class="new-price">2599</span></td>
+        <td><span class="old-price">8700</span> <span class="new-price">8200</span></td>
+        <td><span class="old-price">17,000</span> <span class="new-price">15,999</span></td>
+        <td><span class="old-price">34,000</span> <span class="new-price">31,999</span></td>
+        <td>35%</td>
+      </tr>
+    </tbody>
   </table>
-  <p class="discount-note">* Discount valid only for the first week!</p>
 </section>
 
-<section id="gallery" class="section">
+<section id="gallery" class="section" data-aos="fade-up">
   <h2>Our Studio Gallery</h2>
   <div class="gallery">
     <img src="https://source.unsplash.com/300x200/?dance" alt="Dance Class">
@@ -370,7 +380,7 @@
   </div>
 </section>
 
-<section id="testimonials" class="section">
+<section id="testimonials" class="section" data-aos="fade-up">
   <h2>What Our Students Say</h2>
   <div class="testimonials">
     <div class="testimonial">
@@ -388,7 +398,7 @@
   </div>
 </section>
 
-<section id="contact" class="section">
+<section id="contact" class="section" data-aos="fade-up">
   <h2>Contact Us</h2>
   <p>📍 Mumbra Devi Colony, Diva East, Behind St. Merry School, Mumbai</p>
   <p>📞 91-7738706975</p>
@@ -408,6 +418,10 @@
 
 <!-- Floating WhatsApp Button -->
 <a href="https://wa.me/917738706975" target="_blank" id="whatsapp-btn">💬</a>
+
+<script>
+  AOS.init({ duration: 800, once: true });
+</script>
 
 </body>
 </html>
