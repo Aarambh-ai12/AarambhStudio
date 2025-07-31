@@ -4,189 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aarambh Fit & Flow</title>
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Aarambh-ai12/Aarambh_webpage/321a9d9eb3cc3e146fb7fee38e547cbe4cf3ba14/IMG_20250722_160400_824.webp">
+  <link rel="icon" type="image/png" href="assets/images/logo.webp">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 
   <meta name="description" content="Aarambh Fit & Flow - Dance, Yoga, and Zumba Studio in Diva East, Mumbai. Join free trial classes today!">
   <meta name="keywords" content="Dance Classes Diva, Yoga Diva East, Zumba Diva, Aarambh Fit & Flow, Fitness Diva Mumbai">
   <meta name="author" content="Aarambh Fit & Flow">
-
-  <style>
-    body { margin: 0; font-family: 'Roboto', sans-serif; background: #f9f9f9; }
-    header { background: #1b3d2f; color: white; text-align: center; padding: 20px; }
-    nav { background: #2e4d3f; padding: 10px; text-align: center; }
-    nav a {
-      color: white;
-      margin: 10px;
-      text-decoration: none;
-      font-family: 'Poppins', sans-serif;
-      font-size: 18px;
-      position: relative;
-    }
-    nav a::after {
-      content: '';
-      display: block;
-      height: 2px;
-      background: #25d366;
-      width: 0;
-      transition: width 0.3s;
-      margin: auto;
-    }
-    nav a:hover::after { width: 100%; }
-    nav a:hover { color: #25d366; }
-
-    /* HERO SECTION */
-    .hero {
-      background: url('https://source.unsplash.com/1600x600/?dance,yoga,fitness') no-repeat center/cover;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-    }
-    .hero .overlay {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 50px;
-      border-radius: 10px;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      color: #00b894;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-      font-family: 'Poppins', sans-serif;
-    }
-    .hero p {
-      color: #f0f0f0;
-      font-size: 1.3rem;
-      margin: 10px 0;
-    }
-    .hero .btn {
-      background: #00b894;
-      padding: 12px 25px;
-      color: white;
-      border-radius: 5px;
-      font-size: 1.2rem;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    .hero .btn:hover { background: #019267; }
-
-    .section { padding: 50px; text-align: center; }
-    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .gallery img { border-radius: 10px; width: 300px; height: 200px; object-fit: cover; }
-    iframe { border: none; margin-top: 20px; }
-
-    footer { background: #1b3d2f; color: white; text-align: center; padding: 10px; margin-top: 20px; }
-    footer a { color: white; text-decoration: none; }
-
-    /* Testimonials */
-    #testimonials { background: #f0f0f0; padding: 50px 20px; }
-    .testimonials {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
-      max-width: 900px; margin: 0 auto;
-    }
-    .testimonial {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      width: 280px;
-      text-align: center;
-    }
-    .testimonial h4 { margin-top: 10px; color: #555; }
-
-    /* WhatsApp Floating Button */
-    #whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      font-size: 24px;
-      padding: 12px 16px;
-      border-radius: 50%;
-      text-align: center;
-      text-decoration: none;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      z-index: 1000;
-    }
-    #whatsapp-btn:hover { background: #20b955; }
-
-    /* Pricing Section */
-    #pricing {
-      background: #f9f9f9;
-      padding: 60px 20px;
-    }
-    #pricing h2 {
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-      color: #00b894;
-      font-family: 'Poppins', sans-serif;
-    }
-    .pricing-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-    }
-    .pricing-card {
-      background: white;
-      border: 2px solid #00b894;
-      border-radius: 15px;
-      padding: 30px;
-      width: 280px;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .pricing-card.highlight {
-      background: #e8f8f5;
-      border: 2px solid #019267;
-    }
-    .pricing-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
-    .pricing-card h3 {
-      font-size: 1.6rem;
-      color: #222;
-    }
-    .pricing-card .price {
-      font-size: 1.8rem;
-      color: #00b894;
-      margin: 15px 0;
-      font-weight: bold;
-    }
-    .pricing-card .price span {
-      font-size: 1rem;
-      color: #666;
-    }
-    .pricing-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 15px 0;
-      color: #444;
-    }
-    .pricing-card ul li {
-      margin: 8px 0;
-    }
-    .pricing-card .btn {
-      display: inline-block;
-      background: #00b894;
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      margin-top: 10px;
-      transition: background 0.3s;
-    }
-    .pricing-card .btn:hover {
-      background: #019267;
-    }
-  </style>
 </head>
 <body>
 
@@ -196,20 +23,21 @@
 </header>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#classes">Classes</a>
-  <a href="#schedule">Schedule</a>
-  <a href="#pricing">Pricing</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#testimonials">Testimonials</a>
-  <a href="#contact">Contact</a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#classes">Classes</a></li>
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
-  
-<!-- HERO SECTION -->
+
 <section class="hero">
   <div class="overlay">
-    <h1>Aarambh Fit & Flow</h1>
-    <p>Where Movement Begins – Dance | Yoga | Zumba</p>
+    <h1>Welcome to Aarambh</h1>
+    <p>Your fitness journey starts here</p>
     <a href="https://forms.gle/cFCFhxVHhCSSHr2U7" target="_blank" class="btn">Register Now</a>
   </div>
 </section>
@@ -232,89 +60,36 @@
 </section>
 
 <section id="pricing" class="section">
-  <h2>Our Pricing</h2>
-  <div class="pricing-container">
-    <div class="pricing-card">
-      <h3>💃 Dance</h3>
-      <p class="price">₹1,500 <span>/ month</span></p>
-      <ul>
-        <li>Bollywood, Hip-Hop, Contemporary</li>
-        <li>3 Classes per week</li>
-        <li>Free Trial Available</li>
-      </ul>
-      <a href="https://forms.gle/cFCFhxVHhCSSHr2U7" target="_blank" class="btn">Join Now</a>
-    </div>
-    <div class="pricing-card highlight">
-      <h3>🧘 Yoga</h3>
-      <p class="price">₹1,200 <span>/ month</span></p>
-      <ul>
-        <li>Hatha, Vinyasa, Power Yoga</li>
-        <li>Morning & Evening Batches</li>
-        <li>Free Trial Available</li>
-      </ul>
-      <a href="https://forms.gle/cFCFhxVHhCSSHr2U7" target="_blank" class="btn">Join Now</a>
-    </div>
-    <div class="pricing-card">
-      <h3>🔥 Zumba</h3>
-      <p class="price">₹1,000 <span>/ month</span></p>
-      <ul>
-        <li>High Energy Workouts</li>
-        <li>3 Classes per week</li>
-        <li>Free Trial Available</li>
-      </ul>
-      <a href="https://forms.gle/cFCFhxVHhCSSHr2U7" target="_blank" class="btn">Join Now</a>
-    </div>
-  </div>
+  <h2>Pricing</h2>
+  <p>Dance Classes: ₹1500/month<br>Yoga Classes: ₹1200/month<br>Zumba Classes: ₹1000/month<br>Combo Plans Available!</p>
 </section>
 
-<section id="gallery" class="section">
+<section id="gallery" class="section gallery">
   <h2>Our Studio Gallery</h2>
-  <div class="gallery">
-    <img src="https://source.unsplash.com/300x200/?dance" alt="Dance Class">
-    <img src="https://source.unsplash.com/300x200/?yoga" alt="Yoga Class">
-    <img src="https://source.unsplash.com/300x200/?zumba" alt="Zumba Class">
-    <img src="https://source.unsplash.com/300x200/?fitness" alt="Fitness">
-  </div>
+  <img src="assets/images/dance.jpg" alt="Dance Class">
+  <img src="assets/images/yoga.jpg" alt="Yoga Class">
+  <img src="assets/images/zumba.jpg" alt="Zumba Class">
 </section>
 
 <section id="testimonials" class="section">
   <h2>What Our Students Say</h2>
   <div class="testimonials">
-    <div class="testimonial">
-      <p>"Aarambh Fit & Flow ne mere fitness journey ko badal diya! Dance aur Yoga dono ka perfect combo!"</p>
-      <h4>- Priya S.</h4>
-    </div>
-    <div class="testimonial">
-      <p>"Best Zumba classes in Diva! Energy level is always high and instructors are very supportive."</p>
-      <h4>- Rohan K.</h4>
-    </div>
-    <div class="testimonial">
-      <p>"Friendly atmosphere, professional trainers and affordable prices. Highly recommended!"</p>
-      <h4>- Sneha M.</h4>
-    </div>
+    <div class="testimonial">"Aarambh Fit & Flow changed my life!" – Priya S.</div>
+    <div class="testimonial">"Best Zumba classes in Diva!" – Rohan K.</div>
+    <div class="testimonial">"Friendly trainers and great energy!" – Sneha M.</div>
   </div>
 </section>
 
 <section id="contact" class="section">
   <h2>Contact Us</h2>
-  <p>📍 Mumbra Devi Colony, Diva East, Behind St. Merry School, Mumbai</p>
+  <p>📍 Mumbra Devi Colony, Diva East, Mumbai</p>
   <p>📞 91-7738706975</p>
-  <p>
-    <a href="https://wa.me/917738706975" class="btn" target="_blank">Chat on WhatsApp</a>
-  </p>
-  <h3>Register for Free Trial</h3>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf2C2a9RZP7dBi50Wc6_L9VslHnOPen30YiOP9eHnQfcybASw/viewform?embedded=true" width="100%" height="600">Loading…</iframe>
+  <p><a href="https://wa.me/917738706975" class="btn">Chat on WhatsApp</a></p>
 </section>
 
 <footer>
-  <p>
-    <a href="https://instagram.com/aarambh_fit_and_flow" target="_blank">📷 Follow us on Instagram</a>
-  </p>
   <p>&copy; 2025 Aarambh Fit & Flow | Made with ❤️ in Mumbai</p>
 </footer>
-
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/917738706975" target="_blank" id="whatsapp-btn">💬</a>
 
 </body>
 </html>
