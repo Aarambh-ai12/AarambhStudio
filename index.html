@@ -15,6 +15,7 @@
       --dark-green: #1d794c;
       --light-green: #2a9451;
       --white: #ffffff;
+      --black: #000000;
     }
 
     body {
@@ -25,14 +26,14 @@
     }
 
     header {
-      background: var(--dark-green);
+      background: var(--black);
       color: var(--white);
       text-align: center;
       padding: 20px;
     }
 
     header img {
-      height: 80px;
+      height: 90px;
     }
 
     nav {
@@ -51,12 +52,12 @@
     }
 
     nav a:hover {
-      color: var(--dark-green);
+      color: var(--black);
     }
 
     /* HERO SECTION */
     .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x600/?dance,yoga,fitness') no-repeat center/cover;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/1600x600/?dance,yoga,fitness') no-repeat center/cover;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -121,7 +122,7 @@
     }
 
     /* Classes Section */
-    .classes-container, .pricing-container {
+    .classes-container {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -149,6 +150,41 @@
 
     .card p {
       color: #333;
+    }
+
+    /* Pricing Table */
+    .pricing-section {
+      background: var(--black);
+      color: var(--white);
+      padding: 60px 20px;
+    }
+
+    .pricing-section table {
+      width: 90%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background: var(--white);
+      color: var(--black);
+      border-radius: 10px;
+      overflow: hidden;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .pricing-section th, .pricing-section td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .pricing-section th {
+      background: var(--dark-green);
+      color: var(--white);
+    }
+
+    .discount-note {
+      margin-top: 10px;
+      font-size: 14px;
+      color: var(--light-green);
     }
 
     /* Gallery */
@@ -251,13 +287,7 @@
   <div class="classes-container">
     <div class="card">
       <h3>Dance</h3>
-      <p>Bollywood,
-        Hip-Hop,
-        Contemporary,
-        Salsa,
-        Classical,
-        Freestyle,
-        Bhangra</p>
+      <p>Bollywood, Hip-Hop, Contemporary, Salsa, Classical, Freestyle, Bhangra</p>
     </div>
     <div class="card">
       <h3>Yoga</h3>
@@ -275,22 +305,59 @@
   <p>Morning: 6:00 AM – 12:30 PM<br>Evening: 3:30 PM – 10:00 PM</p>
 </section>
 
-<section id="pricing" class="section">
+<section id="pricing" class="pricing-section">
   <h2>Pricing</h2>
-  <div class="pricing-container">
-    <div class="card">
-      <h3>Dance</h3>
-      <p>₹1,500 / month</p>
-    </div>
-    <div class="card">
-      <h3>Yoga</h3>
-      <p>₹1,200 / month</p>
-    </div>
-    <div class="card">
-      <h3>Zumba</h3>
-      <p>₹1,000 / month</p>
-    </div>
-  </div>
+  <table>
+    <tr>
+      <th>Plan</th>
+      <th>1 Month (₹)</th>
+      <th>3 Months (₹)</th>
+      <th>6 Months (₹)</th>
+      <th>12 Months (₹)</th>
+      <th>Discount %</th>
+    </tr>
+    <tr>
+      <td>Dance</td>
+      <td><s>1500</s> <b>999</b></td>
+      <td><s>4499</s> <b>2999</b></td>
+      <td><s>8899</s> <b>5999</b></td>
+      <td><s>17,999</s> <b>11,999</b></td>
+      <td>33%</td>
+    </tr>
+    <tr>
+      <td>Yoga</td>
+      <td><s>1800</s> <b>999</b></td>
+      <td><s>5349</s> <b>2999</b></td>
+      <td><s>10,799</s> <b>5999</b></td>
+      <td><s>21,599</s> <b>11,999</b></td>
+      <td>44%</td>
+    </tr>
+    <tr>
+      <td>Zumba</td>
+      <td><s>1500</s> <b>999</b></td>
+      <td><s>4499</s> <b>2999</b></td>
+      <td><s>8899</s> <b>5999</b></td>
+      <td><s>17,999</s> <b>11,999</b></td>
+      <td>33%</td>
+    </tr>
+    <tr>
+      <td>Dance + Yoga</td>
+      <td><s>2500</s> <b>1799</b></td>
+      <td><s>5999</s> <b>5499</b></td>
+      <td><s>11,799</s> <b>10,899</b></td>
+      <td><s>23,000</s> <b>21,999</b></td>
+      <td>49%</td>
+    </tr>
+    <tr>
+      <td>Dance + Yoga + Zumba</td>
+      <td><s>4000</s> <b>2599</b></td>
+      <td><s>8700</s> <b>8200</b></td>
+      <td><s>17,000</s> <b>15,999</b></td>
+      <td><s>34,000</s> <b>31,999</b></td>
+      <td>65%</td>
+    </tr>
+  </table>
+  <p class="discount-note">* Discount valid only for the first week!</p>
 </section>
 
 <section id="gallery" class="section">
