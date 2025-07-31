@@ -7,63 +7,52 @@
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Aarambh-ai12/Aarambh_webpage/321a9d9eb3cc3e146fb7fee38e547cbe4cf3ba14/IMG_20250722_160400_824.webp">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
 
   <meta name="description" content="Aarambh Fit & Flow - Dance, Yoga, and Zumba Studio in Diva East, Mumbai. Join free trial classes today!">
   <meta name="keywords" content="Dance Classes Diva, Yoga Diva East, Zumba Diva, Aarambh Fit & Flow, Fitness Diva Mumbai">
   <meta name="author" content="Aarambh Fit & Flow">
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: #ffffff;
-      color: #333;
+    body { 
+      margin: 0; 
+      font-family: 'Roboto', sans-serif; 
+      background: #f9f9f9; 
     }
-
-    header {
-      background: #00b894;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-family: 'Poppins', sans-serif;
+    header { 
+      background: #222; 
+      color: white; 
+      text-align: center; 
+      padding: 20px; 
     }
-
-    nav {
-      background: #f8f9fa;
-      padding: 10px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 2px solid #e0e0e0;
+    nav { 
+      background: #444; 
+      padding: 10px; 
+      text-align: center; 
     }
-
-    nav a {
-      color: #333;
-      margin: 10px;
+    nav a { 
+      color: white; 
+      margin: 10px; 
       text-decoration: none;
       font-family: 'Poppins', sans-serif;
       font-size: 18px;
       position: relative;
     }
-
     nav a::after {
       content: '';
       display: block;
       height: 2px;
-      background: #00b894;
+      background: #25d366;
       width: 0;
       transition: width 0.3s;
       margin: auto;
     }
-
     nav a:hover::after { width: 100%; }
-    nav a:hover { color: #00b894; }
+    nav a:hover { color: #25d366; }
 
     /* HERO SECTION */
     .hero {
-      background: linear-gradient(to bottom right, #ffffff, #e8f8f5);
+      background: linear-gradient(to right, #004d40, #00796b); /* Dark green gradient */
       height: 100vh;
       display: flex;
       align-items: center;
@@ -71,159 +60,78 @@
       text-align: center;
       position: relative;
     }
-
     .hero .overlay {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(0, 0, 0, 0.5);
       padding: 50px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
     }
-
     .hero h1 {
-      font-size: 4rem;
+      font-size: 3.5rem;
+      color: #00ff99; /* Light green text */
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
       font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      color: #00b894;
-      text-shadow: 2px 2px 12px rgba(0, 184, 148, 0.5);
     }
-
     .hero p {
-      color: #444;
-      font-size: 1.5rem;
-      margin: 15px 0;
+      color: #e0f7e9;
+      font-size: 1.4rem;
+      margin: 10px 0 20px;
     }
-
     .hero .btn {
-      background: #00b894;
-      padding: 14px 35px;
+      background: #00c853;
+      padding: 12px 25px;
       color: white;
-      border-radius: 30px;
+      border-radius: 8px;
       font-size: 1.3rem;
       text-decoration: none;
       transition: 0.3s;
-      display: inline-block;
-      margin-top: 20px;
     }
-
     .hero .btn:hover {
-      background: #019267;
-      transform: scale(1.05);
+      background: #009624;
     }
 
     /* SECTIONS */
-    .section {
-      padding: 60px 20px;
-      text-align: center;
-    }
+    .section { padding: 50px; text-align: center; }
+    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .gallery img { border-radius: 10px; width: 300px; height: 200px; object-fit: cover; }
+    iframe { border: none; margin-top: 20px; }
 
-    .section h2 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 2.5rem;
-      color: #00b894;
-      margin-bottom: 20px;
-    }
-
-    /* GALLERY */
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .gallery img {
-      border-radius: 10px;
-      width: 300px;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    /* PRICING */
+    /* Pricing */
     .pricing-container {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+      flex-wrap: wrap;
     }
-
     .pricing-card {
-      background: #f8f9fa;
-      border: 1px solid #e0e0e0;
-      border-radius: 10px;
+      background: white;
       padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       width: 280px;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
+    .pricing-card h3 { color: #00796b; }
+    .pricing-card .price { font-size: 20px; font-weight: bold; margin: 10px 0; }
 
-    .pricing-card h3 {
-      color: #00b894;
-      margin-bottom: 10px;
-    }
-
-    .price {
-      font-size: 1.5rem;
-      color: #333;
-      margin: 10px 0;
-    }
-
-    .pricing-card ul {
-      list-style: none;
-      padding: 0;
-      text-align: left;
-    }
-
-    .pricing-card ul li {
-      margin: 5px 0;
-    }
-
-    /* TESTIMONIALS */
-    #testimonials {
-      background: #f0f0f0;
-    }
-
+    /* Testimonials */
+    #testimonials { background: #f0f0f0; padding: 50px 20px; }
     .testimonials {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      max-width: 900px;
-      margin: 0 auto;
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
+      max-width: 900px; margin: 0 auto;
     }
-
     .testimonial {
       background: white;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       width: 280px;
       text-align: center;
     }
+    .testimonial h4 { margin-top: 10px; color: #555; }
 
-    .testimonial h4 {
-      margin-top: 10px;
-      color: #555;
-    }
-
-    /* CONTACT */
-    iframe {
-      border: none;
-      margin-top: 20px;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #00b894;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
+    /* Footer */
+    footer { background: #222; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+    footer a { color: white; text-decoration: none; }
 
     /* WhatsApp Floating Button */
     #whatsapp-btn {
@@ -259,14 +167,12 @@
   <a href="#testimonials">Testimonials</a>
   <a href="#contact">Contact</a>
 </nav>
-
+  
 <!-- HERO SECTION -->
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <section class="hero">
   <div class="overlay">
     <h1>Aarambh Fit & Flow</h1>
     <p>Where Movement Begins – Dance | Yoga | Zumba</p>
-    <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_u4yrau.json" background="transparent" speed="1" style="width: 300px; height: 300px; margin: 20px auto;" loop autoplay></lottie-player>
     <a href="https://forms.gle/cFCFhxVHhCSSHr2U7" target="_blank" class="btn">Register Now</a>
   </div>
 </section>
@@ -367,6 +273,8 @@
   <p>&copy; 2025 Aarambh Fit & Flow | Made with ❤️ in Mumbai</p>
 </footer>
 
+<!-- Floating WhatsApp Button -->
 <a href="https://wa.me/917738706975" target="_blank" id="whatsapp-btn">💬</a>
+
 </body>
 </html>
