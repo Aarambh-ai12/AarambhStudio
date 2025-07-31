@@ -7,76 +7,63 @@
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Aarambh-ai12/Aarambh_webpage/321a9d9eb3cc3e146fb7fee38e547cbe4cf3ba14/IMG_20250722_160400_824.webp">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
 
-  <!-- Smooth Scroll -->
+  <meta name="description" content="Aarambh Fit & Flow - Dance, Yoga, and Zumba Studio in Diva East, Mumbai. Join free trial classes today!">
+  <meta name="keywords" content="Dance Classes Diva, Yoga Diva East, Zumba Diva, Aarambh Fit & Flow, Fitness Diva Mumbai">
+  <meta name="author" content="Aarambh Fit & Flow">
+
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background: #f9f9f9;
+      font-family: 'Montserrat', sans-serif;
+      background: #ffffff;
+      color: #333;
     }
 
-    /* Loader */
-    #loader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 2000;
-    }
-
-    /* Navbar */
     header {
+      background: #00b894;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    nav {
+      background: #f8f9fa;
+      padding: 10px;
+      text-align: center;
       position: sticky;
       top: 0;
-      z-index: 1000;
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      transition: background 0.3s;
+      z-index: 100;
+      border-bottom: 2px solid #e0e0e0;
     }
-    header.scrolled {
-      background: #00b894;
-    }
-    nav {
-      background: #333;
-      text-align: center;
-      padding: 10px;
-    }
+
     nav a {
-      color: white;
+      color: #333;
       margin: 10px;
       text-decoration: none;
       font-family: 'Poppins', sans-serif;
       font-size: 18px;
       position: relative;
     }
+
     nav a::after {
       content: '';
       display: block;
       height: 2px;
-      background: #25d366;
+      background: #00b894;
       width: 0;
       transition: width 0.3s;
       margin: auto;
     }
+
     nav a:hover::after { width: 100%; }
-    nav a:hover { color: #25d366; }
+    nav a:hover { color: #00b894; }
 
     /* HERO SECTION */
     .hero {
-      background: url('https://source.unsplash.com/1600x600/?dance,yoga,fitness') no-repeat center/cover;
+      background: linear-gradient(to bottom right, #ffffff, #e8f8f5);
       height: 100vh;
       display: flex;
       align-items: center;
@@ -84,89 +71,117 @@
       text-align: center;
       position: relative;
     }
+
     .hero .overlay {
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(255, 255, 255, 0.9);
       padding: 50px;
-      border-radius: 10px;
-    }
-    .hero h1 {
-      font-size: 3.5rem;
-      color: #00b894;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-    }
-    .hero p {
-      color: #f0f0f0;
-      font-size: 1.3rem;
-      margin: 10px 0;
-    }
-    .hero .btn {
-      background: #00b894;
-      padding: 12px 25px;
-      color: white;
-      border-radius: 5px;
-      font-size: 1.2rem;
-      text-decoration: none;
-      transition: 0.3s;
-      box-shadow: 0 0 10px rgba(0,184,148,0.7);
-    }
-    .hero .btn:hover {
-      background: #019267;
-      box-shadow: 0 0 15px rgba(0,255,200,0.9);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
+    .hero h1 {
+      font-size: 4rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: #00b894;
+      text-shadow: 2px 2px 12px rgba(0, 184, 148, 0.5);
+    }
+
+    .hero p {
+      color: #444;
+      font-size: 1.5rem;
+      margin: 15px 0;
+    }
+
+    .hero .btn {
+      background: #00b894;
+      padding: 14px 35px;
+      color: white;
+      border-radius: 30px;
+      font-size: 1.3rem;
+      text-decoration: none;
+      transition: 0.3s;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .hero .btn:hover {
+      background: #019267;
+      transform: scale(1.05);
+    }
+
+    /* SECTIONS */
     .section {
-      padding: 50px;
+      padding: 60px 20px;
       text-align: center;
     }
 
-    /* Pricing Section */
-    #pricing .pricing-container {
+    .section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      color: #00b894;
+      margin-bottom: 20px;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .gallery img {
+      border-radius: 10px;
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    /* PRICING */
+    .pricing-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
     }
+
     .pricing-card {
-      background: white;
+      background: #f8f9fa;
+      border: 1px solid #e0e0e0;
       border-radius: 10px;
       padding: 20px;
       width: 280px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
-    .pricing-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+
+    .pricing-card h3 {
+      color: #00b894;
+      margin-bottom: 10px;
     }
-    .pricing-card h3 { color: #00b894; }
-    .pricing-card .price {
+
+    .price {
       font-size: 1.5rem;
       color: #333;
       margin: 10px 0;
     }
 
-    /* Gallery Carousel */
-    .gallery {
-      display: flex;
-      overflow-x: auto;
-      gap: 10px;
-      scroll-snap-type: x mandatory;
-      padding: 10px;
-    }
-    .gallery img {
-      flex: 0 0 auto;
-      width: 300px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      scroll-snap-align: center;
+    .pricing-card ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
     }
 
-    /* Testimonials */
+    .pricing-card ul li {
+      margin: 5px 0;
+    }
+
+    /* TESTIMONIALS */
     #testimonials {
       background: #f0f0f0;
-      padding: 50px 20px;
     }
+
     .testimonials {
       display: flex;
       flex-wrap: wrap;
@@ -175,29 +190,39 @@
       max-width: 900px;
       margin: 0 auto;
     }
+
     .testimonial {
       background: white;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       width: 280px;
       text-align: center;
     }
 
-    /* Contact Section */
-    iframe { border: none; margin-top: 20px; }
+    .testimonial h4 {
+      margin-top: 10px;
+      color: #555;
+    }
 
-    /* Footer */
+    /* CONTACT */
+    iframe {
+      border: none;
+      margin-top: 20px;
+    }
+
+    /* FOOTER */
     footer {
-      background: #222;
+      background: #00b894;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 10px;
+      margin-top: 20px;
     }
+
     footer a {
-      color: #25d366;
+      color: white;
       text-decoration: none;
-      margin: 0 5px;
     }
 
     /* WhatsApp Floating Button */
@@ -220,11 +245,6 @@
 </head>
 <body>
 
-<!-- Loader -->
-<div id="loader">
-  <img src="https://assets7.lottiefiles.com/packages/lf20_u4yrau.json" width="120">
-</div>
-
 <header>
   <h1>Aarambh Fit & Flow</h1>
   <p>Where Movement Begins – Dance | Yoga | Zumba</p>
@@ -241,10 +261,12 @@
 </nav>
 
 <!-- HERO SECTION -->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <section class="hero">
   <div class="overlay">
     <h1>Aarambh Fit & Flow</h1>
     <p>Where Movement Begins – Dance | Yoga | Zumba</p>
+    <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_u4yrau.json" background="transparent" speed="1" style="width: 300px; height: 300px; margin: 20px auto;" loop autoplay></lottie-player>
     <a href="https://forms.gle/cFCFhxVHhCSSHr2U7" target="_blank" class="btn">Register Now</a>
   </div>
 </section>
@@ -331,33 +353,20 @@
   <h2>Contact Us</h2>
   <p>📍 Mumbra Devi Colony, Diva East, Behind St. Merry School, Mumbai</p>
   <p>📞 91-7738706975</p>
-  <p><a href="https://wa.me/917738706975" class="btn" target="_blank">Chat on WhatsApp</a></p>
+  <p>
+    <a href="https://wa.me/917738706975" class="btn" target="_blank">Chat on WhatsApp</a>
+  </p>
+  <h3>Register for Free Trial</h3>
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf2C2a9RZP7dBi50Wc6_L9VslHnOPen30YiOP9eHnQfcybASw/viewform?embedded=true" width="100%" height="600">Loading…</iframe>
 </section>
 
 <footer>
   <p>
-    <a href="#about">About</a> | 
-    <a href="#classes">Classes</a> | 
-    <a href="#pricing">Pricing</a> | 
-    <a href="#contact">Contact</a>
+    <a href="https://instagram.com/aarambh_fit_and_flow" target="_blank">📷 Follow us on Instagram</a>
   </p>
   <p>&copy; 2025 Aarambh Fit & Flow | Made with ❤️ in Mumbai</p>
 </footer>
 
-<!-- Floating WhatsApp Button -->
 <a href="https://wa.me/917738706975" target="_blank" id="whatsapp-btn">💬</a>
-
-<script>
-  window.addEventListener("scroll", () => {
-    const header = document.querySelector("header");
-    header.classList.toggle("scrolled", window.scrollY > 50);
-  });
-
-  window.addEventListener("load", () => {
-    document.getElementById("loader").style.display = "none";
-  });
-</script>
-
 </body>
 </html>
