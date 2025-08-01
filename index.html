@@ -12,8 +12,9 @@
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
+  <link rel="stylesheet" href="./index.css">
   <style>
+    
     :root {
       --dark-green: #1d794c;
       --light-green: #2a9451;
@@ -69,8 +70,8 @@
 
     /* HERO SECTION */
   .hero {
-  background: url('aarambh-fit-flow.png') no-repeat center center;
-  background-size: contain;
+  background: url('https://raw.githubusercontent.com/Aarambh-ai12/Aarambh_webpage/321a9d9eb3cc3e146fb7fee38e547cbe4cf3ba14/IMG_20250722_160400_824.webp') no-repeat center center;
+  background-size: auto;
   background-color: #1d794c;
   position: relative;
   height: 100vh;
@@ -87,7 +88,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* black overlay */
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
 }
 
     .hero h1 {
@@ -99,7 +101,7 @@
     }
 
     .hero p {
-      color: var(--white);
+      color: var(--black);
       font-size: 1.5rem;
       margin: 10px 0;
       animation: fadeInUp 1.2s ease-in-out;
@@ -107,8 +109,10 @@
 
     .hero .btn {
       background: var(--light-green);
-      padding: 12px 25px;
+      padding: 12px 28px;
       color: white;
+      margin: 10px;
+      font-weight: bold;
       border-radius: 5px;
       font-size: 1.2rem;
       text-decoration: none;
@@ -301,6 +305,7 @@
   <div class="overlay">
     <h1>Aarambh Fit & Flow</h1>
     <p>Where Movement Begins – Dance | Yoga | Zumba</p>
+    <hr>
     <a href="https://forms.gle/cFCFhxVHhCSSHr2U7" target="_blank" class="btn">Register Now</a>
   </div>
 </section>
