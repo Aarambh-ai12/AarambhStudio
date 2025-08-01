@@ -68,19 +68,27 @@
     }
 
     /* HERO SECTION */
-    .hero {
-     background: url('aarambh-fit-flow.png') no-repeat center/cover;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-    }
+  .hero {
+  background: url('aarambh-fit-flow.png') no-repeat center center;
+  background-size: contain;
+  background-color: #1d794c;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-    .hero .overlay {
-      color: var(--white);
-    }
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* black overlay */
+}
 
     .hero h1 {
       font-size: 4rem;
