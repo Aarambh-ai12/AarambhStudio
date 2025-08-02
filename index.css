@@ -77,7 +77,7 @@
 }
 
     .hero h1 {
-      font-size: 4rem;
+      font-size: 6rem;
       color: var(--light-green);
       text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
       font-family: 'Poppins', sans-serif;
@@ -129,6 +129,9 @@
       color: (--dark-green);
     }
 
+  #about p{
+    font-size: 1.5rem;
+  }
     /* Classes Section */
     .classes-container {
       display: flex;
@@ -152,8 +155,12 @@
     }
 
     .card h3 {
+      text-decoration: underline;
       color: var(--light-green);
-      font-size: 1.5rem;
+      font-size: 1.6rem;
+    }
+    .card ul li{
+      text-align: start;
     }
 
     /* Pricing Section */
@@ -264,3 +271,7 @@
     }
 
     #whatsapp-btn:hover { background: #20b955; }
+
+    @media screen () {
+      
+    }
