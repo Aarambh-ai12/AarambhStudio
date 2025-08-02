@@ -272,6 +272,12 @@
 
     #whatsapp-btn:hover { background: #20b955; }
 
-    @media screen () {
-      
-    }
+@media only screen and (min-width: 300px) and (max-width: 767px){
+   .hero h1{
+    font-size: 3rem;
+   }
+   .hero p{
+    font-size: 1rem;
+   }
+}
+
