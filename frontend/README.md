@@ -1,4 +1,4 @@
-# 💃 Aarambh Dance Studio
+💃 Aarambh Dance Studio
 
 A modern, responsive website for a dance studio built with **React.js** and **Tailwind CSS**. This project showcases studio details, instructor information, class offerings, and a contact form integrated with location via Google Maps.
 
@@ -39,3 +39,4 @@ npm install
 
 # Start the development server
 npm run dev
+```
