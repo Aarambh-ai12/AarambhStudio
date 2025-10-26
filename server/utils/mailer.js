@@ -8,9 +8,9 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-export const sendEmail = async (to, subject, text) => {
+export const sendEmail = async (to, subject, name) => {
     const mailOptions = {
-        from: `"Aarambh Fit & Flow" ${process.env.EMAIL_USER}>`,
+        from: `"Aarambh Fit & Flow" <${process.env.EMAIL_USER}>`,
         to,
         subject:"Thank you for registering with Aarambh Fit & Flow",
         html:`

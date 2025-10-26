@@ -21,6 +21,7 @@ const addRegister = async (req, res) => {
       message,
     });
     await sendEmail(email, "Thank you for registering with Aarambh Fit & Flow", name);
+    
     res
       .status(200)
       .json({ msg: "User Registered Successfully", user: newUser });
