@@ -23,7 +23,6 @@ const AdminLogin = () => {
         `${import.meta.env.VITE_API_URL}/api/admin/login`,
         credentials
       );
-      console.log(response.data.email);
       setAdmin(response.data.email);
       localStorage.setItem("admin", JSON.stringify(response.data.email));
 
