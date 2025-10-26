@@ -20,6 +20,9 @@ app.use("/api/admin", adminRoutes);
 const port = process.env.PORT;
 
 connectDb().then(() => {
+  app.get("/",(req,res)=>{
+    res.status(200).send("DB and Backend Services are live")
+  })
   app.listen(port, () => {
     console.log(`Server connected at ${port}`);
   });
