@@ -1,8 +1,8 @@
 import React from "react";
 
 const CourseDetails = ({ student, formatDate }) => (
-  <div className="overflow-x-auto w-full">
-    <table className="min-w-full border border-gray-300 mb-8 text-sm">
+  <div className="overflow-x-auto w-full mb-8">
+    <table className="min-w-full border border-gray-300 text-sm md:text-base">
       <thead className="bg-green-700 text-white">
         <tr>
           <th className="p-3 text-left">Dance Style</th>
@@ -14,12 +14,12 @@ const CourseDetails = ({ student, formatDate }) => (
         </tr>
       </thead>
       <tbody>
-        <tr className="border-t">
-          <td className="p-3">{student.danceStyle}</td>
-          <td className="p-3">{student.dancePackage}</td>
+        <tr className="border-t hover:bg-gray-50">
+          <td className="p-3 font-semibold">{student.danceStyle}</td>
+          <td className="p-3 font-semibold">{student.dancePackage}</td>
           <td className="p-3 text-center">{formatDate(student.startDate)}</td>
           <td className="p-3 text-center">{formatDate(student.endDate)}</td>
-          <td className="p-3 text-right font-bold text-green-700">
+          <td className="p-3 text-right font-semibold text-green-700">
             ₹{student.fees.toLocaleString()}
           </td>
           <td className="p-3 text-center">{student.paymentMode}</td>

@@ -140,7 +140,7 @@ export const TESTIMONIALS = [
 ];
 
 export const CONTACT_INFO = {
-  location: "Krrish Arya Height, Shop No.5, Behind St. Mary School, MumbraDevi Colony Diva(E), Thane, Maharashtra 400612 ",
+  location: "Krrish Arya Heights, Shop No.5, Behind St. Mary School, Mumbra Devi Colony, Diva (E), Thane, Maharashtra 400612",
   phone: "+91 77387 06975",
   email: "aarambhfitandflow@gmail.com",
 };

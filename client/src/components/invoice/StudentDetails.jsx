@@ -1,22 +1,25 @@
 import React from "react";
 
 const StudentDetails = ({ student }) => (
-  <div className="border border-gray-300 rounded-lg mb-8">
+  <div className="border border-gray-300 rounded-lg mb-8 w-full">
+    {/* Header */}
     <div className="bg-green-700 text-white px-4 py-2 rounded-t-lg">
-      <h3 className="font-semibold text-lg">Student Details</h3>
+      <h3 className="font-semibold text-lg md:text-xl">Student Details</h3>
     </div>
-    <div className="px-6 py-4 space-y-1 text-sm">
+
+    {/* Details */}
+    <div className="px-4 md:px-6 py-4 grid grid-cols-1 md:grid-cols-2 gap-2 text-sm md:text-base text-gray-700">
       <p>
-        <strong>Name:</strong> {student.name}
+        <span className="font-semibold">Name:</span> {student.name}
       </p>
       <p>
-        <strong>Email:</strong> {student.email}
+        <span className="font-semibold">Email:</span> {student.email}
       </p>
       <p>
-        <strong>Phone:</strong> {student.phone}
+        <span className="font-semibold">Phone:</span> {student.phone}
       </p>
       <p>
-        <strong>Address:</strong> {student.address}
+        <span className="font-semibold">Address:</span> {student.address || "N/A"}
       </p>
     </div>
   </div>

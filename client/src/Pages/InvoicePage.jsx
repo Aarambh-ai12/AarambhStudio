@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
 
 import { CONTACT_INFO } from "../constant/data";
 import InvoiceHeader from "../components/invoice/InvoiceHeader";
@@ -28,7 +26,6 @@ const InvoicePage = () => {
       year: "numeric",
     });
 
-  // ✅ Fetch Student Data
   useEffect(() => {
     const fetchStudent = async () => {
       try {
@@ -43,7 +40,6 @@ const InvoicePage = () => {
     fetchStudent();
   }, [id]);
 
-  // ✅ Print
   const handlePrint = () => {
     const printFrame = document.createElement("iframe");
     printFrame.style.position = "absolute";
@@ -53,10 +49,8 @@ const InvoicePage = () => {
     document.body.appendChild(printFrame);
 
     const doc = printFrame.contentWindow.document;
-    const styleLinks = Array.from(
-      document.querySelectorAll("link[rel='stylesheet'], style")
-    )
-      .map((link) => link.outerHTML)
+    const styles = Array.from(document.querySelectorAll("link[rel='stylesheet'], style"))
+      .map((el) => el.outerHTML)
       .join("\n");
 
     doc.open();
@@ -64,10 +58,11 @@ const InvoicePage = () => {
       <html>
         <head>
           <title>Print Invoice</title>
-          ${styleLinks}
+          ${styles}
           <style>
-            @page { size: A4; margin: 5mm; }
-            body { background: white; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            @page { size: A4; margin: 10mm; }
+            body { background: white; -webkit-print-color-adjust: exact; print-color-adjust: exact; font-family: sans-serif; }
+            .no-print { display: none !important; }
           </style>
         </head>
         <body>${invoiceRef.current.outerHTML}</body>
@@ -83,6 +78,7 @@ const InvoicePage = () => {
   };
 
   if (loading) return <LoadingSpinner />;
+
   if (!student)
     return (
       <div className="text-center text-gray-600 mt-20">
@@ -91,22 +87,23 @@ const InvoicePage = () => {
     );
 
   return (
-    <div className="flex flex-col items-center bg-gray-100 py-10 px-4 print:bg-white">
-      <div
-        ref={invoiceRef}
-        className="bg-white w-full max-w-[210mm] min-h-[297mm] shadow-2xl border border-gray-300 rounded-xl p-10 text-gray-800 print:border-none print:shadow-none"
-      >
-        <InvoiceHeader contact={CONTACT_INFO} />
-        <InvoiceTitle />
-        <InvoiceInfo student={student} formatDate={formatDate} />
-        <StudentDetails student={student} />
-        <CourseDetails student={student} formatDate={formatDate} />
-        <PaymentSummary student={student} formatDate={formatDate} />
-        <InvoiceFooter />
-      </div>
+ <div className="flex flex-col items-center bg-gray-100 py-5 px-4 print:bg-white border-t print:border-t-0">
+  <div
+    ref={invoiceRef}
+    className="bg-white w-full max-w-[210mm] min-h-[297mm] shadow-2xl border border-gray-300 rounded-xl p-8 md:p-10 text-gray-800 print:border-none print:shadow-none"
+  >
+    <InvoiceHeader contact={CONTACT_INFO} />
+    <InvoiceTitle />
+    <InvoiceInfo student={student} formatDate={formatDate} />
+    <StudentDetails student={student} />
+    <CourseDetails student={student} formatDate={formatDate} />
+    <PaymentSummary student={student} formatDate={formatDate} />
+    <InvoiceFooter />
+  </div>
 
-      <ActionButtons handlePrint={handlePrint} />
-    </div>
+  <ActionButtons handlePrint={handlePrint} />
+</div>
+
   );
 };
 
