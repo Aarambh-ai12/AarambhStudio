@@ -155,7 +155,7 @@ export const SOCIAL_MEDIA = {
   tiktok: "https://www.tiktok.com/@aarambhfitflow",
   pinterest: "https://www.pinterest.com/aarambhfitflow",
   reddit: "https://www.reddit.com/r/aarambhfitflow",
-  website: "https://aarambh-studio.vercel.app/",
+  website: "https://aarambhstudio.vercel.app/",
 };
 
 export const GALLERY = [
