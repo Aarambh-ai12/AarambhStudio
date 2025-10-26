@@ -12,6 +12,7 @@ import ProtectedRoute from "./components/admin/ProtectedRoute";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "./context/AuthContext";
 import InquiryData from "./Pages/InquiryData";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   // Track login status in state
@@ -64,7 +65,7 @@ function App() {
           />
         </Routes>
       </div>
-
+<ToastContainer position="top-right" autoClose={3000} theme="colored" />
       <Footer />
     </Router>
   );
