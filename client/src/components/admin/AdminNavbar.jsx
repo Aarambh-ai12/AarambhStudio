@@ -7,11 +7,11 @@ const AdminNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const { logOut } = useContext(AuthContext);
+  const [isDropDownOpen,setIsDropDownOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   const menuItems = [
-    { label: "Home", path: "/" },
     { label: "Dashboard", path: "/dashboard" },
     { label: "Inquiry Data", path: "/register" },
     { label: "Add Student", path: "/add-student" },
@@ -27,7 +27,7 @@ const AdminNavbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Brand */}
         <div
-          onClick={() => handleNavigation("/dashboard")}
+          onClick={() => handleNavigation("/")}
           className="text-white text-2xl font-bold cursor-pointer tracking-wide hover:text-gray-200 transition duration-300"
         >
           Aarambh Fit & Flow
