@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Hero from "../components/custom/Hero";
-import About from "../components/custom/About";
-import Classes from "../components/custom/Classes";
-import Schedule from "../components/custom/Schedule";
-import Pricing from "../components/custom/Pricing";
-import Gallery from "../components/custom/Gallery";
-import Testimonials from "../components/custom/Testimonial";
-import Contact from "../components/custom/Contact";
+import Hero from "../components/section/Hero";
+import About from "../components/section/About";
+import Classes from "../components/section/Classes";
+import Schedule from "../components/section/Schedule";
+import Pricing from "../components/section/Pricing";
+import Gallery from "../components/section/Gallery";
+import Testimonials from "../components/section/Testimonial";
+import Contact from "../components/section/Contact";
 
 function Home() {
   useEffect(() => {

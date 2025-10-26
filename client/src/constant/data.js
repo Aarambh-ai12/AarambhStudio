@@ -140,13 +140,13 @@ export const TESTIMONIALS = [
 ];
 
 export const CONTACT_INFO = {
-  location: "Aarambh Studio, Mumbai, India",
-  phone: "+91 98765 43210",
-  email: "aarambhfitflow@gmail.com",
+  location: "Krrish Arya Height, Shop No.5, Behind St. Mary School, MumbraDevi Colony Diva(E), Thane, Maharashtra 400612 ",
+  phone: "+91 77387 06975",
+  email: "aarambhfitandflow@gmail.com",
 };
 
 export const SOCIAL_MEDIA = {
-  whatsapp: "https://wa.me/9876543210",
+  whatsapp: "https://wa.me/7738706975",
   instagram: "https://www.instagram.com/aarambh_fit_and_flow/",
   facebook: "https://www.facebook.com/aarambhfitflow",
   twitter: "https://twitter.com/aarambhfitflow",
@@ -155,7 +155,7 @@ export const SOCIAL_MEDIA = {
   tiktok: "https://www.tiktok.com/@aarambhfitflow",
   pinterest: "https://www.pinterest.com/aarambhfitflow",
   reddit: "https://www.reddit.com/r/aarambhfitflow",
-  website: "https://www.aarambhfitflow.com",
+  website: "https://aarambh-studio.vercel.app/",
 };
 
 export const GALLERY = [

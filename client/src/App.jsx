@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/custom/Navbar";
+import Navbar from "./components/section/Navbar";
 import StudentForm from "./Pages/StudentForm";
 import Dashboard from "./Pages/Dashboard";
 import InvoicePage from "./Pages/InvoicePage";
 import Home from "./Pages/Home";
-import Header from "./components/custom/Header";
-import Footer from "./components/custom/Footer";
+import Header from "./components/section/Header";
+import Footer from "./components/section/Footer";
 import AdminLogin from "./Pages/AdminLogin";
 import AdminNavbar from "./components/admin/AdminNavbar";
 import ProtectedRoute from "./components/admin/ProtectedRoute";
