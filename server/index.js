@@ -10,16 +10,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-app.use(cors({
-  origin:  [
-     "https://gloomy-spooky-sorcery-q7xww497rv4pf67q7-5173.app.github.dev/", // frontend (optional)
-     "https://aarambh-studio.vercel.app/",
-      "http://localhost:5173" // local dev (optional)
-    ],
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
-
-}));
+app.use(cors());
 
 app.use("/api/student", studentRoutes);
 app.use("/api/register", registerRoutes);

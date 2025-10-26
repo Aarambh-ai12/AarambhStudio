@@ -20,7 +20,7 @@ const addRegister = async (req, res) => {
       timeSlot,
       message,
     });
-    await sendEmail(email, "Thank you for registering with Aarambh Fit & Flow", name);
+    // await sendEmail(email, "Thank you for registering with Aarambh Fit & Flow", name);
     
     res
       .status(200)
