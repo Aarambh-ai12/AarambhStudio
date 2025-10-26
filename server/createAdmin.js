@@ -11,7 +11,7 @@ const createAdmin = async () => {
       useUnifiedTopology: true,
     });
 
-    const hashedPassword = await bcrypt.hash("Rohan@123", 10);
+    const hashedPassword = await bcrypt.hash("Aarambh@123", 10);
     const newAdmin = new adminModel({
       email: "admin@admin.com",
       password: hashedPassword,
