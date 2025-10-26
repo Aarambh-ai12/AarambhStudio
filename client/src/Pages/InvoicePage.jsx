@@ -32,7 +32,7 @@ const InvoicePage = () => {
   useEffect(() => {
     const fetchStudent = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/student/${id}`);
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/student/${id}`);
         setStudent(res.data.student);
       } catch (err) {
         console.error("Error fetching student:", err.message);

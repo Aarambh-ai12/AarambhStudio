@@ -26,7 +26,7 @@ const Dashboard = () => {
     const getStudentData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get("http://localhost:5000/api/student");
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/student`);
         setStudents(response.data.allStudent);
         setFilteredStudents(response.data.allStudent);
       } catch (error) {

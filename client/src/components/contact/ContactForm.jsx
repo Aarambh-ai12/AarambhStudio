@@ -18,7 +18,7 @@ const ContactForm = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/register/add-register",
+        `${import.meta.env.VITE_API_URL}/register/add-register`,
         userData,
         {
           headers: {

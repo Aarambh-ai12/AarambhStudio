@@ -39,7 +39,7 @@ const StudentForm = () => {
     setSuccess("");
 
     try {
-      await axios.post("http://localhost:5000/api/student/add", student);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/student/add`, student);
       toast.success("Student added successfully!");
       setSuccess("Student registered successfully!");
       setStudent({
