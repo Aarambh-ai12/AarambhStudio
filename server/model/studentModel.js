@@ -8,7 +8,7 @@ const studentSchema = new mongoose.Schema(
     address: { type: String },
     invoiceNumber: { type: String, unique: true },
     danceStyle: { type: String, required: true },
-    dancePackage: { type: String, required: true },
+    dancePackage: { type: String },
 
     // 💰 Financial details
     costumeFees: { type: Number },
