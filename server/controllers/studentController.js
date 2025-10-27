@@ -9,6 +9,8 @@ const addStudent = async (req, res) => {
       address,
       danceStyle,
       dancePackage,
+      costumeFees,
+      admissionFees,
       fees,
       paymentMode,
       paymentStatus,
@@ -44,6 +46,8 @@ const addStudent = async (req, res) => {
       address,
       danceStyle,
       dancePackage,
+      costumeFees,
+      admissionFees,
       fees,
       paymentMode,
       paymentStatus,
@@ -63,7 +67,7 @@ const addStudent = async (req, res) => {
 
 const getAllStudent = async (req, res) => {
   try {
-    const allStudent = await studentModel.find();
+    const allStudent = await studentModel.find().sort({createdAt: -1});
     res.status(200).json({ allStudent });
   } catch (error) {
     res

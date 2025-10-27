@@ -11,6 +11,8 @@ const studentSchema = new mongoose.Schema(
     dancePackage: { type: String, required: true },
 
     // 💰 Financial details
+    costumefees: { type: Number },
+    admissionfees: { type: Number},
     fees: { type: Number, required: true },
     paymentMode: {
       type: String,
