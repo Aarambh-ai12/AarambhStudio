@@ -16,7 +16,9 @@ const StudentForm = () => {
     address: "",
     invoiceNumber: "",
     danceStyle: "",
-    dancePackage: "",
+    dancePackage: "1 Month",
+    costumeFees: "",
+    admissionFees: "",
     fees: "",
     paymentMode: "cash",
     paymentStatus: "pending",
@@ -50,6 +52,8 @@ const StudentForm = () => {
         invoiceNumber: "",
         danceStyle: "",
         dancePackage: "",
+        costumeFees: "",
+        admissionFees: "",
         fees: "",
         paymentMode: "cash",
         paymentStatus: "pending",
@@ -61,6 +65,7 @@ const StudentForm = () => {
       const message = err.response?.data?.message || "Something went wrong.";
       setError(message);
       toast.error(message);
+      console.log("Error adding student:", err);
     } finally {
       setLoading(false);
     }
@@ -108,12 +113,26 @@ const StudentForm = () => {
           onChange={handleChange}
           required
         />
-        <StudentInput
+        <StudentSelect
           label="Dance Package *"
           name="dancePackage"
           value={student.dancePackage}
+          options={["1 Month", "3 Months", "6 Months", "12 Months"]}
           onChange={handleChange}
-          required
+        />
+        <StudentInput
+          label="Costume Fees *"
+          name="costumeFees"
+          type="number"
+          value={student.costumeFees}
+          onChange={handleChange}
+        />
+        <StudentInput
+          label="Admission Fees *"
+          name="admissionFees"
+          type="number"
+          value={student.admissionFees}
+          onChange={handleChange}
         />
         <StudentInput
           label="Fees *"
@@ -127,7 +146,7 @@ const StudentForm = () => {
           label="Payment Mode"
           name="paymentMode"
           value={student.paymentMode}
-          options={["cash", "card", "upi", "online"]}
+          options={["Cash", "Card", "UPI"]}
           onChange={handleChange}
         />
         <StudentSelect

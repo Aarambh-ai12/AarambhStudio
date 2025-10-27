@@ -1,26 +1,35 @@
 import React from "react";
 
 const StudentDetails = ({ student }) => (
-  <div className="border border-gray-300 rounded-lg mb-8 w-full">
+  <div className="border border-gray-200 rounded-xl mb-6 w-full shadow-sm bg-white/80 backdrop-blur-sm">
     {/* Header */}
-    <div className="bg-green-700 text-white px-4 py-2 rounded-t-lg">
-      <h3 className="font-semibold text-lg md:text-xl">Student Details</h3>
+    <div className="bg-gradient-to-r from-green-700 to-green-600 text-white px-5 py-2.5 rounded-t-xl">
+      <h3 className="font-semibold text-base md:text-lg tracking-wide">
+        Student Details
+      </h3>
     </div>
 
-    {/* Details */}
-    <div className="px-4 md:px-6 py-4 grid grid-cols-1 md:grid-cols-2 gap-2 text-sm md:text-base text-gray-700">
-      <p>
-        <span className="font-semibold">Name:</span> {student.name}
-      </p>
-      <p>
-        <span className="font-semibold">Email:</span> {student.email}
-      </p>
-      <p>
-        <span className="font-semibold">Phone:</span> {student.phone}
-      </p>
-      <p>
-        <span className="font-semibold">Address:</span> {student.address || "N/A"}
-      </p>
+    {/* Details Section */}
+    <div className="px-5 md:px-6 py-3 grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-4 text-xs md:text-sm text-gray-700 leading-snug">
+      <div>
+        <span className="font-semibold text-gray-800">Name: </span>
+        <span className="text-gray-600">{student.name}</span>
+      </div>
+
+      <div>
+        <span className="font-semibold text-gray-800">Email: </span>
+        <span className="text-gray-600">{student.email}</span>
+      </div>
+
+      <div>
+        <span className="font-semibold text-gray-800">Phone: </span>
+        <span className="text-gray-600">{student.phone}</span>
+      </div>
+
+      <div>
+        <span className="font-semibold text-gray-800">Address: </span>
+        <span className="text-gray-600">{student.address || "N/A"}</span>
+      </div>
     </div>
   </div>
 );

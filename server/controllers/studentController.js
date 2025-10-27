@@ -64,7 +64,6 @@ const addStudent = async (req, res) => {
       .json({ msg: "Internal Server Error", error: error.message });
   }
 };
-
 const getAllStudent = async (req, res) => {
   try {
     const allStudent = await studentModel.find().sort({createdAt: -1});

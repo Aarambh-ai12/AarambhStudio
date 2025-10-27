@@ -57,7 +57,7 @@ const InvoicePage = () => {
     doc.write(`
       <html>
         <head>
-          <title>Print Invoice</title>
+          <title>${student.name}</title>
           ${styles}
           <style>
             @page { size: A4; margin: 10mm; }
