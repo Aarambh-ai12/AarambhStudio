@@ -11,8 +11,8 @@ const studentSchema = new mongoose.Schema(
     dancePackage: { type: String, required: true },
 
     // 💰 Financial details
-    costumefees: { type: Number },
-    admissionfees: { type: Number},
+    costumeFees: { type: Number },
+    admissionFees: { type: Number},
     fees: { type: Number, required: true },
     paymentMode: {
       type: String,
@@ -23,11 +23,9 @@ const studentSchema = new mongoose.Schema(
       default: "pending",
     },
 
-    // 🕒 Optional: duration or validity of the package
     startDate: { type: Date },
     endDate: { type: Date },
 
-    // 🗓️ Automatically added timestamps
   },
   { timestamps: true }
 );
