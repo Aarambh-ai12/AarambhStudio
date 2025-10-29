@@ -21,7 +21,7 @@ function Home() {
         <Hero />
         <About />
         <Classes />
-        {/* <Schedule /> */}
+        <Schedule />
         <Pricing />
         <Gallery />
         <Testimonials />
