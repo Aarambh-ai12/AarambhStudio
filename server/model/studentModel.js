@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 const studentSchema = new mongoose.Schema(
   {
     name: { type: String, required: true },
+    age:{ type: Number, required: true },
     email: { type: String, required: true, unique: true },
     phone: { type: String, required: true },
     address: { type: String },
@@ -14,6 +15,7 @@ const studentSchema = new mongoose.Schema(
     // 💰 Financial details
     costumeFees: { type: Number ,default: 0},
     admissionFees: { type: Number,default: 0 },
+    pendingFees: { type: Number, default: 0 },
     fees: { type: Number, required: true },
     paymentMode: {
       type: String,

@@ -6,11 +6,13 @@ const addStudent = async (req, res) => {
       name,
       email,
       phone,
+      age,
       address,
       danceStyle,
       dancePackage,
       costumeFees,
       admissionFees,
+      pendingFees,
       fees,
       paymentMode,
       paymentStatus,
@@ -44,10 +46,12 @@ const addStudent = async (req, res) => {
       email,
       phone,
       address,
+      age,
       danceStyle,
       dancePackage,
       costumeFees,
       admissionFees,
+      pendingFees,
       fees,
       paymentMode,
       paymentStatus,
@@ -93,6 +97,31 @@ const getStudentById = async (req, res) => {
   }
 };
 
+
+const updateStudent = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updatedData = req.body;
+
+    if (updatedData.pendingFees !== undefined) {
+      updatedData.paymentStatus = updatedData.pendingFees > 0 ? "pending" : "paid";
+    }
+
+    const updatedStudent = await studentModel.findByIdAndUpdate(id, updatedData, { new: true });
+
+    if (!updatedStudent)
+      return res.status(400).json({ msg: "Student not Found" });
+
+    res.status(200).json({
+      msg: "Student Updated Successfully",
+      student: updatedStudent,
+    });
+  } catch (error) {
+    res.status(500).json({ msg: "Internal Server Error", error: error.message });
+  }
+};
+
+
 const deleteStudent = async (req, res) => {
   try {
     const { id } = req.params;
@@ -110,4 +139,5 @@ const deleteStudent = async (req, res) => {
       .json({ msg: "Internal Server Error", error: error.message });
   }
 }
-export { addStudent, getAllStudent, getStudentById ,deleteStudent};
+export { addStudent, getAllStudent, getStudentById, updateStudent, deleteStudent };
+
